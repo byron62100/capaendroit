@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>QROC – Cours Synthétique (Sans Audio/Video)</title>
+  <style>
+    /* ============= RESET & BASE ============= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ============= HEADER ============= */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* ============= HERO SECTION ============= */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ============= CONTENT SECTION ============= */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      font-size: 1.3rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* EXEMPLES & EXERCICES */
+    .exemple {
+      background: #fff5d9;
+      border-left: 5px solid #f3c978;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+    }
+    .exemple h4 {
+      font-size: 1.1rem;
+      color: #9c1c1c;
+      margin-bottom: 0.5rem;
+    }
+
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* POINTS ESSENTIELS */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* BOUTON RETOUR ACCUEIL */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<section class="hero">
+  <h2>Questions à Réponse Ouverte Courte (QROC) – Cours Synthétique</h2>
+  <p>
+    Ici, tu trouveras un cours bref et efficace pour maîtriser les QROC, 
+    un format fréquent en évaluation juridique. Aucun audio ni vidéo n’est associé.
+  </p>
+</section>
+
+<section class="content">
+  <h3>1. Qu’est-ce qu’une QROC ?</h3>
+  <p>
+    La QROC (Question à Réponse Ouverte Courte) est un type de question d’examen ou d’évaluation 
+    où l’on attend un développement concis, allant <strong>droit au but</strong>.  
+    Pas un simple “oui/non”, mais pas une dissertation non plus :  
+    l’étudiant doit présenter la règle de droit applicable et répondre de façon structurée 
+    en quelques lignes ou quelques paragraphes très brefs.
+  </p>
+  <p>
+    Exemple :  
+    “Définissez la notion de dol en droit civil et illustrez par un exemple.”  
+    On attend alors une petite explication (2-5 phrases) mentionnant l’article de code, 
+    les éléments du dol, et un exemple concret.
+  </p>
+
+  <h3>2. Les objectifs d’une QROC</h3>
+  <ul>
+    <li><strong>Vérifier la connaissance précise</strong> : le correcteur voit si tu sais définir une notion 
+        ou appliquer rapidement une règle.</li>
+    <li><strong>Tester la synthèse</strong> : inutile de rédiger une longue dissertation. 
+        Il faut aller à l’essentiel.</li>
+    <li><strong>Évaluer la rigueur</strong> : même brièvement, la réponse doit être rigoureuse et structurée 
+        (définition, application, conclusion).</li>
+  </ul>
+
+  <h3>3. Conseils pour répondre efficacement</h3>
+  <ul>
+    <li><strong>Lire attentivement</strong> la question : de quoi parle-t-elle ? Qu’attend-on ? 
+        Une définition ? Un exemple ? Une règle précise ?</li>
+    <li><strong>Structurer la réponse</strong> : 1/2 phrase d’introduction, présentation de la règle, 
+        application ou illustration, conclusion rapide.</li>
+    <li><strong>Être concis</strong> : évite les détours. Sois direct. 
+        “Le dol est défini à l’art. 1137 C. civ. ... Il implique une manœuvre frauduleuse...”</li>
+    <li><strong>Employer les bons mots</strong> : vocabulaire juridique exact (faute, nullité, préjudice...).</li>
+    <li><strong>Faire un mini-plan si besoin</strong> (ex. I/II) si la question le justifie, 
+        mais attention au temps et à la longueur.</li>
+  </ul>
+
+  <h3>4. Exemple de QROC</h3>
+  <div class="exemple">
+    <h4>Question :</h4>
+    <p>
+      “Quelles sont les conditions pour qu’une clause soit réputée abusive en droit de la consommation ?”  
+      (4-5 lignes maximum)
+    </p>
+    <h4>Réponse concise :</h4>
+    <p>
+      “Selon l’article L.212-1 du Code de la consommation, une clause abusive crée 
+      un déséquilibre significatif entre les droits et obligations des parties.  
+      Elle doit être imposée par le professionnel au consommateur, sans négociation possible, 
+      et porter atteinte à l’équité contractuelle.  
+      La jurisprudence (Cass. 1re civ., 30 sept. 2020) exige également une analyse au cas par cas, 
+      tenant compte de la mauvaise foi éventuelle du professionnel.”
+    </p>
+  </div>
+  <p>
+    Ici, on voit la règle légale, un bref développement, et la conclusion en quelques lignes seulement.
+  </p>
+
+  <h3>5. Autre format (Tableau : question/réponse)</h3>
+  <table class="example-table" style="border-collapse: collapse; width: 100%; margin-top:1.5rem;">
+    <thead>
+      <tr>
+        <th style="width: 30%;">QROC</th>
+        <th style="width: 70%;">Réponse brève</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Définissez la force majeure en droit des contrats</td>
+        <td>
+          En droit civil (art. 1218 C. civ.), la force majeure est un événement imprévisible, irrésistible et extérieur 
+          qui empêche l’exécution d’une obligation. Son effet est d’exonérer le débiteur de sa responsabilité 
+          lorsque ces trois conditions sont réunies.
+        </td>
+      </tr>
+      <tr>
+        <td>Quels sont les principaux modes de rupture du contrat de travail ?</td>
+        <td>
+          Principaux modes : démission, licenciement (économique/personnel), rupture conventionnelle, retraite.  
+          Le licenciement doit être justifié par une cause réelle et sérieuse, la démission s’entend d’un acte 
+          unilatéral du salarié, etc.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="exercice-section">
+  <h3>Exercice : QROC notée 20/20</h3>
+  <p>
+    Entraîne-toi à répondre à cette QROC en quelques lignes, de façon parfaite :
+  </p>
+  <ol>
+    <li><strong>Question</strong> : “Quelle est la différence entre la nullité et la résolution d’un contrat en droit civil ?”</li>
+    <li><strong>Attendu</strong> : 5-6 lignes. Explique les deux notions, mentionne un article (ex. art. 1178 C. civ. pour la nullité), 
+        donne un exemple, conclue sur la différence (effet rétroactif vs anéantissement pour l’avenir).</li>
+  </ol>
+  <p>
+    Pour viser 20/20 :  
+    - Mentionne la base légale (C. civ.)  
+    - Donne la définition synthétique  
+    - Illustre brièvement (ex. nullité = si vice du consentement ; résolution = inexécution contractuelle)  
+    - Conclue sur l’effet rétroactif (nullité) vs. effet non rétroactif (résolution).
+  </p>
+</section>
+
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li>Une <strong>QROC</strong> évalue la capacité à répondre de façon concise et précise.</li>
+    <li>Adapter la structure: définir la notion, donner la règle légale, illustrer si nécessaire.</li>
+    <li>Éviter les digressions : aller à l’essentiel.</li>
+    <li>Faire attention à l'orthographe et au vocabulaire juridique exact.</li>
+    <li>Pour une excellente note, la réponse doit être claire, ordonnée et référencée 
+        (articles de code, cas pratique synthétique).</li>
+  </ul>
+</section>
+
+<div class="back-home-container">
+  <button class="back-home-btn" onclick="window.location.href='index.html'">
+    Retour à l'accueil
+  </button>
+</div>
+
+<footer>
+  <p>© 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

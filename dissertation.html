@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>La Dissertation Juridique – Cours Ultra Complet + Exemple 20/20</title>
+  <style>
+    /* =============== RESET & BASE =============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =============== HEADER =============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* =============== HERO SECTION =============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* =============== SUR-LIGNAGES =============== */
+    .highlight-red {
+      background-color: #ff9999;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-green {
+      background-color: #b3ff99;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-blue {
+      background-color: #99e6ff;
+      padding: 0.1rem 0.2rem;
+    }
+
+    /* =============== CONTENT SECTION =============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .definition {
+      background: #fdf8e4;
+      border-left: 5px solid #f7d97e;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 4px;
+    }
+    .definition strong {
+      color: #9c1c1c;
+    }
+
+    /* =============== VIDEO SECTION =============== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* =============== EXERCICE SECTION =============== */
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* =============== POINTS ESSENTIELS SECTION =============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* =============== BOUTON RETOUR =============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* =============== FOOTER =============== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>La Dissertation Juridique : Cours Ultra Complet + Exemple 20/20</h2>
+  <p>
+    Il n’y a pas d’audio pour ce cours. Tu trouveras ici une méthodologie extrêmement détaillée de la dissertation juridique, 
+    un exemple concret noté 20/20, un exercice pratique, et une vidéo pour aller encore plus loin. 
+    Prépare ton stylo et lance-toi dans la démonstration argumentée.
+  </p>
+</section>
+
+<!-- CONTENT: LE COURS TRES LONG -->
+<section class="content">
+  <h3>1. La dissertation : définition, enjeux et objectifs</h3>
+  <p>
+    La <span class="highlight-red">dissertation juridique</span> consiste à répondre de manière structurée 
+    à une problématique de droit, en mobilisant ta connaissance des textes (législation, jurisprudence), 
+    ta capacité d’analyse et d’argumentation, et ta logique intellectuelle.  
+  </p>
+  <p>
+    À la différence d’un simple commentaire d’article ou d’un cas pratique, la dissertation requiert :
+  </p>
+  <ul>
+    <li>Une réflexion approfondie sur le sujet, avec un <em>regard critique</em></li>
+    <li>La mise en évidence d’un <span class="highlight-green">débat doctrinal</span>, d’une évolution législative 
+        ou d’une tension entre principes juridiques</li>
+    <li>La formulation d’une <strong>problématique</strong>, qui sera la colonne vertébrale du devoir</li>
+    <li>Un <strong>plan</strong> rigoureux, montrant la progression de ta pensée</li>
+  </ul>
+  <p>
+    Au final, la dissertation évalue ta culture juridique, ta maîtrise méthodologique et ta 
+    rigueur intellectuelle. Le correcteur attend de toi une véritable démonstration, et non un 
+    simple catalogue d’articles ou un résumé de cours.
+  </p>
+
+  <h3>2. Les étapes fondamentales de la dissertation</h3>
+  <p>
+    <strong>Étape 1 : Analyser le sujet</strong><br>
+    - Lis-le à deux reprises, note les termes-clés : “légalité”, “sanction”, “ordre public”, “liberté individuelle”, etc.  
+    - Identifie la branche concernée (droit civil, droit pénal, droit administratif, etc.).  
+    - Interroge-toi : Quelle est la question de fond ? Y a-t-il un conflit de normes ? Un débat d’actualité ? 
+  </p>
+  <p>
+    <strong>Étape 2 : Formuler la problématique</strong><br>
+    - La problématique est la <span class="highlight-blue">question directrice</span> du devoir, 
+      souvent implicitement contenue dans le sujet.  
+    - Par exemple, si le sujet est : “La nullité du contrat : sanction ou mécanisme protecteur ?”, 
+      ta problématique pourrait être : “La nullité est-elle une simple pénalité imposée au contractant fautif, 
+      ou un moyen de sauvegarde de l’équilibre contractuel ?”
+  </p>
+  <p>
+    <strong>Étape 3 : Trouver un plan adapté</strong><br>
+    - Le plan binaire (I/II) reste le plus prisé en droit, 
+      divisé en deux sous-parties (A/B) par partie.  
+    - Évite le “plan piège” (ex. I. Avantages / II. Inconvénients) trop basique et trop descriptive.  
+    - Assure-toi que ton plan répond bien à la question posée.
+  </p>
+  <p>
+    <strong>Étape 4 : Rédiger l’intro</strong><br>
+    - Phase primordiale : accroche (historique, actualité, phrase-choc), définition des termes, 
+      problématique clairement mise en avant, et annonce du plan.  
+    - Soigne le style, car cette partie conditionne la première impression du correcteur.
+  </p>
+  <p>
+    <strong>Étape 5 : Développer chaque partie</strong><br>
+    - Partie I : premier axe d’argumentation ; Partie II : second axe.  
+    - Cite des <em>articles, arrêts, doctrines</em> pour étayer tes arguments.  
+    - Sois critique : compare éventuellement des points de vue ou des lois différentes.  
+    - Conclus chaque partie par une transition vers la partie suivante, pour la cohérence.
+  </p>
+  <p>
+    <strong>Étape 6 : Rédiger la conclusion</strong><br>
+    - Réponds directement à la problématique, en rappelant tes arguments majeurs.  
+    - Ouvre sur une perspective (projet de réforme, comparaison avec d’autres systèmes, application pratique).  
+    - Ne lance pas de nouveau débat dans la conclusion.
+  </p>
+
+  <h3>3. Exemple d’une dissertation notée 20/20</h3>
+  <p>
+    <strong>Sujet :</strong> “La légitime défense nuit-elle au monopole de l’État sur l’usage de la force ?”
+  </p>
+  <div class="definition">
+    <strong>Introduction (exemple) :</strong><br><br>
+    En droit pénal, la légitime défense (art. 122-5 C. pén.) accorde à un citoyen 
+    la possibilité de se protéger ou de protéger autrui face à une agression injuste, 
+    jusqu’à commettre un acte pénalement répréhensible en temps normal (violences, voire homicide).  
+    Historiquement, seul l’État, via ses forces de l’ordre, détient le monopole légitime de la violence 
+    pour maintenir l’ordre public.  
+    <br><br>
+    <span class="highlight-blue">Problématique :</span> la légitime défense vient-elle alors contrecarrer ce monopole, 
+    au risque d’encourager l’auto-justice, ou demeure-t-elle un simple correctif nécessaire dans des situations extrêmes ?  
+    <br><br>
+    <em>Annoncé du plan :</em> Nous examinerons d’abord les fondements et limites du monopole étatique (I), 
+    avant d’analyser le rôle paradoxal de la légitime défense comme exception maîtrisée (II).
+  </div>
+
+  <p>
+    <strong>Plan résumé :</strong><br>
+    I. Le monopole de l’État sur l’usage de la force : un principe ancestral  
+      A. Justifications théoriques et légales (ordre public, sécurité collective)  
+      B. Limites et critiques (abus de pouvoir, inadaptation dans certaines circonstances)  
+    II. La légitime défense : exception validant le monopole ?  
+      A. Conditions strictes (réalité de l’agression, proportionnalité…)  
+      B. Un prolongement de la mission étatique plutôt qu’une remise en cause
+  </p>
+  <div class="definition">
+    <strong>Extrait de développement (II.B) :</strong><br><br>
+    Loin de saper le monopole de l’État, la légitime défense constitue, 
+    selon la doctrine majoritaire, un <span class="highlight-red">“délai de secours”</span> 
+    offert au citoyen en l’absence immédiate d’une intervention policière.  
+    Il s’agit d’un “mandat” temporaire : l’individu agit en lieu et place des forces publiques 
+    uniquement parce que l’urgence l’y contraint.  
+    Ainsi, la jurisprudence (Crim. 25 janvier 2012) précise que la légitime défense n’est jamais 
+    un droit illimité, mais reste encadrée par les critères de nécessité, proportionnalité et immédiateté 
+    de l’agression.
+  </div>
+
+  <div class="definition">
+    <strong>Conclusion (exemple) :</strong><br><br>
+    En définitive, si la légitime défense semble offrir au citoyen une parcelle du pouvoir de contrainte, 
+    elle ne contredit pas le monopole étatique ; elle en est le complément d’urgence.  
+    Dès que l’autorité publique peut intervenir, l’État reprend son droit exclusif d’user de la force légitime, 
+    tandis que la personne agressée doit cesser toute riposte.  
+    <br><br>
+    Loin d’une atteinte à la souveraineté, la légitime défense apparaît alors comme un mécanisme protecteur, 
+    évitant les dérives de l’auto-justice généralisée, sous la stricte surveillance du juge pénal.
+  </div>
+  <p>
+    <em>Justification de la note 20/20 :</em>
+  </p>
+  <ul>
+    <li><strong>Intro</strong> limpide : l’accroche (monopole étatique), la définition (art. 122-5), la problématique très claire</li>
+    <li><strong>Plan binaire cohérent</strong> : I. Principe théorique, II. Exception nuancée</li>
+    <li><strong>Références précises</strong> (articles, jurisprudences, analyses doctrinales)</li>
+    <li><strong>Analyse critique</strong> : on voit que l’auteur envisage les deux faces (risque d’auto-justice vs. complément de l’État)</li>
+    <li><strong>Style fluide</strong>, orthographe soignée, transitions logiques</li>
+  </ul>
+  <p>
+    Le correcteur a considéré qu’il n’y avait rien à améliorer pour un devoir de ce niveau 
+    (correspondant probablement à un examen intermédiaire en droit pénal).
+  </p>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <h3>Vidéo pour aller plus loin</h3>
+  <p>
+    Pour approfondir ta technique de dissertation juridique, regarde cette vidéo YouTube. 
+    Elle propose des conseils supplémentaires sur l’analyse du sujet, la rédaction de l’intro et la structuration :
+  </p>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/QseW8CazoSI" 
+      title="Méthodologie de la Dissertation Juridique"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="margin-top:1rem;">
+    <em>(Cette vidéo est externe et complète idéalement le cours, aucun besoin d’audio supplémentaire ici.)</em>
+  </p>
+</section>
+
+<!-- EXERCICE SECTION -->
+<section class="exercice-section">
+  <h3>Exercice : Rédige ta propre dissertation</h3>
+  <p>
+    Voici un exercice pour concrétiser la méthodologie expliquée :
+  </p>
+  <ol>
+    <li>
+      Choisis un <strong>sujet de droit</strong> lié à l’actualité ou à une question doctrinale 
+      (ex. “La contractualisation croissante en droit administratif : un affaiblissement de l’acte unilatéral ?”).
+    </li>
+    <li>
+      <strong>Analyse le sujet</strong> : relève les mots-clés, questionne les enjeux (liberté, souveraineté, sécurité juridique…).
+    </li>
+    <li>
+      <strong>Formule ta problématique</strong> : où se situe le conflit d’idées ? Quelle est la question fondamentale ?
+    </li>
+    <li>
+      <strong>Organise ton plan</strong> (I/II ou I/II/III), en veillant à ce que les parties répondent logiquement 
+      aux interrogations posées.
+    </li>
+    <li>
+      <strong>Rédige l’intro</strong> : accroche (historique, actualité), définitions, problématique, annonce du plan.
+    </li>
+    <li>
+      <strong>Développe</strong> tes parties : cites tes articles, arrêts, doctrines, confronte éventuellement 
+      plusieurs points de vue, n’oublie pas de <em>transitionner</em> entre A et B, puis entre la Partie I et II.
+    </li>
+    <li>
+      <strong>Conclue clairement</strong> : réponds à la problématique, synthétise l’apport de tes arguments, 
+      ouvre éventuellement sur un champ plus large (comparaison internationale, réforme, etc.).
+    </li>
+    <li>
+      Relis-toi : orthographe, cohérence, renvois aux bons articles, fluidité de la pensée.
+    </li>
+  </ol>
+  <p>
+    Compare le résultat obtenu à l’exemple de dissertation 20/20 ci-dessus 
+    pour évaluer la solidité de ta structure et la pertinence de tes références.
+  </p>
+</section>
+
+<!-- POINTS ESSENTIELS -->
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li><strong>Problématique claire</strong> : la clé d’une dissertation percutante.</li>
+    <li><strong>Plan cohérent</strong> : annonce-le dans l’intro, respecte-le dans le développement.</li>
+    <li>Appuie-toi sur <span class="highlight-blue">articles de loi</span>, <span class="highlight-red">arrêts</span> 
+        et <span class="highlight-green">doctrine</span> pour illustrer tes arguments.</li>
+    <li>Soigne <em>les transitions</em> : évite l’effet “liste” sans lien logique.</li>
+    <li>La conclusion doit <strong>répondre directement</strong> à la question posée et proposer une courte ouverture.</li>
+    <li>Un <strong>style fluide</strong> et l’absence de fautes renforcent l’impact de ton devoir.</li>
+  </ul>
+</section>
+
+<!-- BOUTON RETOUR ACCUEIL -->
+<div class="back-home-container">
+  <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

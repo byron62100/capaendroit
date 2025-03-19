@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Comment faire des fiches arc-en-ciel – Cours & Audio (Version Très Longue)</title>
+  <style>
+    /* =============== RESET & BASE =============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =============== HEADER =============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* =============== HERO SECTION =============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .audio-wrapper {
+      margin-top: 1.5rem;
+    }
+
+    /* =============== SUR-LIGNAGES =============== */
+    .highlight-red {
+      background-color: #ff9999;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-green {
+      background-color: #b3ff99;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-blue {
+      background-color: #99e6ff;
+      padding: 0.1rem 0.2rem;
+    }
+
+    /* =============== CONTENT SECTION =============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .definition {
+      background: #fdf8e4;
+      border-left: 5px solid #f7d97e;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 4px;
+    }
+    .definition strong {
+      color: #9c1c1c;
+    }
+
+    /* Images */
+    .images-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .images-section a {
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .images-section img {
+      max-width: 300px;
+      display: block;
+    }
+
+    /* =============== VIDEO SECTION =============== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* =============== EXERCICE SECTION =============== */
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* =============== POINTS ESSENTIELS SECTION =============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* =============== BOUTON RETOUR =============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* =============== FOOTER =============== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <!-- Logo : assure-toi que "logo.png" se trouve dans le même dossier -->
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<!-- HERO (avec audio) -->
+<section class="hero">
+  <h2>Comment faire des fiches arc-en-ciel ?</h2>
+  <p>
+    Voici un cours extrêmement détaillé sur la conception de fiches de révision arc-en-ciel, 
+    ainsi qu’un audio explicatif pour t’accompagner étape par étape. 
+    Cette méthode peut changer radicalement ta façon d’apprendre le droit.
+  </p>
+  <!-- Player audio -->
+  <div class="audio-wrapper">
+    <audio id="fichesArcencielAudio" controls>
+      <!-- Remplace "audioficherevision.wav" par le nom exact si besoin -->
+      <source src="audioficherevision.wav" type="audio/wav">
+      Votre navigateur ne supporte pas l’élément audio.
+    </audio>
+  </div>
+</section>
+
+<!-- CONTENT: Le Cours encore plus détaillé -->
+<section class="content">
+  <h3>1. Pourquoi la couleur est-elle si essentielle ?</h3>
+  <p>
+    Dans la jungle des articles, jurisprudences et principes doctrinaux, 
+    <span class="highlight-green">la couleur</span> joue un rôle de balise.  
+    Des études montrent que la variété de couleurs stimule plusieurs zones du cerveau, 
+    améliorant l’encodage et la récupération des informations.  
+    En clair, devant un flot de textes juridiques, 
+    nos yeux se sentent vite saturés s’il n’y a que du noir et blanc.  
+    Les fiches arc-en-ciel, elles, introduisent de la <em>musique visuelle</em> dans tes révisions.
+  </p>
+  <p>
+    Selon la psychologie cognitive, associer une couleur à un type de contenu (ex. définition légale) 
+    facilite la “mise en mémoire” car ton cerveau crée un lien “couleur = fonction du texte”.  
+    C’est cette connexion qui rend la fiche plus frappante et plus facile à relire ultérieurement.
+  </p>
+
+  <h3>2. Définir un code couleur cohérent</h3>
+  <p>
+    La pierre angulaire de cette technique : <span class="highlight-red">un code couleur clair et stable</span>.  
+    Rien ne sert de disposer de 10 surligneurs si tu n’es pas sûr de leur usage.  
+    Voici un exemple de répartition possible :
+  </p>
+  <ul>
+    <li><strong>Couleur 1 (ex. Bleu)</strong> : définitions légales (articles du Code civil, Code pénal…)</li>
+    <li><strong>Couleur 2 (ex. Jaune)</strong> : exemples concrets, cas pratiques, jurisprudences importantes</li>
+    <li><strong>Couleur 3 (ex. Vert)</strong> : attention, piège, confusion récurrente</li>
+    <li><strong>Couleur 4 (ex. Orange)</strong> : principes généraux, grandes idées, finalité de la règle</li>
+    <li><strong>Couleur 5 (ex. Rose)</strong> : dates historiques, réformes majeures, ou renvois bibliographiques</li>
+  </ul>
+  <p>
+    Tu peux personnaliser selon ton affinité : l’essentiel est de **garder le même usage** de ces couleurs tout au long de tes fiches.  
+    Cohérence rime avec efficacité.
+  </p>
+
+  <h3>3. Matériel et préparation</h3>
+  <p>
+    Pour faire une fiche arc-en-ciel digne de ce nom, il te faut :  
+  </p>
+  <ul>
+    <li>Des fiches bristol format A5 ou A4 (ou un carnet à feuilles détachables)</li>
+    <li>4 à 6 surligneurs ou stylos de couleurs distinctes</li>
+    <li>Éventuellement des post-it colorés si tu souhaites ajouter des annotations ponctuelles ou tardives</li>
+    <li>Un bureau dégagé : la créativité se déploie mieux dans l’ordre</li>
+  </ul>
+  <p>
+    Ensuite, identifie clairement **quel chapitre** ou **quel arrêt** tu vas ficher.  
+    Trop d’informations tuent l’information, donc sois sélectif : si c’est un chapitre de 30 pages, 
+    cherche à extraire la substantifique moelle.
+  </p>
+
+  <h3>4. Construction pas à pas de ta fiche</h3>
+  <p>
+    <strong>Étape 1 :</strong> Le titre. Note-le en haut, lisible, d’une couleur sobre (noir ou gris) 
+    pour éviter de brouiller les messages colorés destinés au contenu.  
+  </p>
+  <p>
+    <strong>Étape 2 :</strong> Le plan. Réfléchis à la structure logique :  
+    - I/II/III ou 1/2/3,  
+    - Ou A/B/C si tu préfères.  
+    Ce plan t’aidera à organiser tes parties (définition, application, limites, etc.).
+  </p>
+  <p>
+    <strong>Étape 3 :</strong> Inscris tes informations en appliquant systématiquement le code couleur prévu.  
+    - Articles essentiels -> Couleur 1,  
+    - Exemples -> Couleur 2,  
+    - Pièges -> Couleur 3, etc.
+  </p>
+  <p>
+    <strong>Étape 4 :</strong> Laisse des espaces blancs pour aérer.  
+    Trop de texte collé rend la fiche indigeste, même si elle est colorée.
+  </p>
+  <p>
+    <strong>Étape 5 :</strong> En fin de fiche, un petit résumé (3 à 4 lignes) synthétise l’idée générale, 
+    en reprenant les points-clés dans leurs couleurs respectives.
+  </p>
+
+  <div class="definition">
+    <strong>Exemple concret :</strong><br>
+    Fiche “La Compétence Juridictionnelle” :  
+    - Titre en haut : “COMPÉTENCE JURIDICTIONNELLE” (en noir).<br>
+    - Couleur 1 (Bleu) : articles 42 à 48 du CPC (procédure civile) qui définissent la compétence territoriale.  
+    - Couleur 2 (Jaune) : exemples pratiques (un litige sur un contrat de travail jugé au Conseil de prud’hommes ; un divorce devant le TJ du domicile conjugal).  
+    - Couleur 3 (Vert) : pièges (ne pas confondre compétence territoriale et compétence d’attribution ; attention à la clause attributive de juridiction).<br>
+    - Bref résumé final : 2 lignes, en bleu/vert pour rappeler la structure.
+  </div>
+
+  <h3>5. Exemples de fiches réalisées</h3>
+  <p>
+    Ci-dessous, deux photos illustrant des fiches arc-en-ciel. Clique pour les voir en grand dans un nouvel onglet :
+  </p>
+  <div class="images-section">
+    <a href="fichederévision.jpg" target="_blank">
+      <img src="fichederévision.jpg" alt="Exemple de fiche de révision arc-en-ciel 1">
+    </a>
+    <a href="fichederevision2.jpg" target="_blank">
+      <img src="fichederevision2.jpg" alt="Exemple de fiche de révision arc-en-ciel 2">
+    </a>
+  </div>
+  <p>
+    Tu peux observer comment chaque étudiant a choisi ses propres couleurs et son propre agencement. 
+    L’important est de respecter la logique : une couleur = un rôle.
+  </p>
+
+  <h3>6. Les bénéfices d’une telle organisation</h3>
+  <p>
+    <strong>1. Moins de monotonie :</strong> on évite l’effet “roman tout en noir et blanc” qui fatigue et décourage.  
+  </p>
+  <p>
+    <strong>2. Lecture ciblée :</strong> au moment de réviser, tu peux aller directement à la couleur correspondant 
+    à l’info recherchée (exemple, définition…).
+  </p>
+  <p>
+    <strong>3. Mémorisation accrue :</strong> la couleur agit comme un signal d’alarme pour tes neurones. 
+    Tu transformes un flot d’informations brutes en un système codé visuellement.
+  </p>
+  <p>
+    <strong>4. Gain de temps :</strong> tu repères plus vite ce qui t’intéresse dans ta fiche. 
+    Plus besoin de tout relire au crayon noir pour trouver la moindre notion.
+  </p>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <h3>Vidéo démonstrative</h3>
+  <p>
+    Pour approfondir, regarde cette vidéo YouTube qui complète le cours écrit 
+    et l’audio présent en haut de la page :
+  </p>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/nlFy-YtDsCE" 
+      title="Créer des fiches de révision arc-en-ciel"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="margin-top:1rem;">
+    <em>(La vidéo est externe et ne contient pas d’audio supplémentaire ici, 
+    mais tu y trouveras d’autres astuces visuelles.)</em>
+  </p>
+</section>
+
+<!-- EXERCICE SECTION -->
+<section class="exercice-section">
+  <h3>Exercice : Confectionne ta propre fiche arc-en-ciel</h3>
+  <p>
+    Mets immédiatement en pratique ce que tu viens d’apprendre. 
+    Voici un exercice détaillé pour t’y aider :
+  </p>
+  <ol>
+    <li>
+      Choisis un <strong>court sujet juridique</strong> (ex. “Les éléments constitutifs du contrat” 
+      ou “La distinction entre délit et quasi-délit en responsabilité civile”).  
+      Consulte rapidement un manuel, un article de code ou une synthèse de cours.
+    </li>
+    <li>
+      Définis un <strong>plan simple</strong> (I/II ou I/II/III) :  
+      - I. Principes / fondements,  
+      - II. Exemples concrets,  
+      - III. Erreurs ou limites.
+    </li>
+    <li>
+      Prépare <strong>4 ou 5 couleurs</strong> :  
+      - Couleur 1 pour la définition légale,  
+      - Couleur 2 pour l’exemple pratique,  
+      - Couleur 3 pour le piège, etc.
+    </li>
+    <li>
+      Rédige ta <strong>fiche sur bristol</strong>, applique le code couleur à chaque info.  
+      Laisse suffisamment d’espaces blancs pour la clarté.
+    </li>
+    <li>
+      En fin de fiche, écris un mini-résumé (2 à 3 lignes) reprenant l’essence de ton sujet 
+      avec la même logique colorée.
+    </li>
+    <li>
+      Compare le rendu avec une fiche “tout en noir” que tu aurais faite avant. 
+      Note tes sensations : plus lisible ? plus motivant ?
+    </li>
+  </ol>
+  <p>
+    Si possible, partage ta fiche avec un camarade ou un ami : 
+    voit-il rapidement la distinction entre définitions, exemples et pièges ? 
+    C’est un test pour vérifier la cohérence de ton code couleur.
+  </p>
+</section>
+
+<!-- POINTS ESSENTIELS -->
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li><strong>Choisis un code couleur</strong> (4 à 6 teintes maxi) et respecte-le toujours.</li>
+    <li><span class="highlight-red">Une couleur = une fonction</span> (définition, jurisprudence, piège...).</li>
+    <li><strong>Aère</strong> ta fiche : laisse des marges, des espacements, un résumé concis en fin de page.</li>
+    <li>Lis et relis régulièrement tes fiches pour ancrer ce code couleur dans ta mémoire.</li>
+    <li>Le plaisir <strong>visuel</strong> accroît la motivation et la productivité.</li>
+    <li>Compare l’“avant” (fiche noire et blanche) et l’“après” (fiche arc-en-ciel) : tu verras la différence.</li>
+  </ul>
+</section>
+
+<!-- BOUTON RETOUR ACCUEIL -->
+<div class="back-home-container">
+  <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

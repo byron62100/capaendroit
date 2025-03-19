@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Les Abréviations Juridiques – Cours Ultra Complet</title>
+  <style>
+    /* ============== RESET & BASE ============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ============== HEADER ============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* ============== HERO (No Audio) ============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ============== CONTENT SECTION ============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .exemple {
+      background: #fff5d9;
+      border-left: 5px solid #f3c978;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+    }
+    .exemple h4 {
+      font-size: 1.1rem;
+      color: #9c1c1c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* TABLE PREVIEW */
+    .pdf-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .pdf-table th,
+    .pdf-table td {
+      border: 1px solid #ccc;
+      padding: 0.6rem 0.8rem;
+      vertical-align: top;
+    }
+    .pdf-table th {
+      background: #eef1f7;
+      color: #1273b3;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    /* CLiquable PDF LINK */
+    .pdf-link {
+      display: inline-block;
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .pdf-link:hover {
+      background: #b82727;
+    }
+
+    /* ============== EXERCICE SECTION ============== */
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* ============== POINTS ESSENTIELS SECTION ============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* ============== BOUTON RETOUR ============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<section class="hero">
+  <h2>Les Abréviations Juridiques : Cours Ultra Complet</h2>
+  <p>
+    Sur cette page, découvre un cours très long sur les abréviations juridiques, 
+    accompagné d’un tableau d’extraits tirés d’un fichier PDF.  
+    Tu peux cliquer ci-dessous pour accéder à la version intégrale du PDF (fictif).
+  </p>
+</section>
+
+<section class="content">
+  <h3>1. Utilité des abréviations en droit</h3>
+  <p>
+    Les abréviations juridiques permettent de raccourcir les références 
+    (codes, juridictions, revues), rendant les textes plus légers.  
+    À la place de “Code de la consommation”, on voit “C. consom.”,  
+    ou “Cour de cassation, chambre criminelle” abrégé en “Cass. crim.”.  
+    Sans ces formes abrégées, la rédaction et la lecture d’articles, d’arrêts 
+    ou de doctrine seraient bien plus lourdes.
+  </p>
+
+  <h3>2. Principes généraux</h3>
+  <ul>
+    <li>Rester cohérent : si tu emploies “C. civ.”, ne dis pas plus loin “C.civ.” ou “Code civ.”</li>
+    <li>Ne pas improviser : utilise les abréviations reconnues (C. consom., CE, CA…)</li>
+    <li>Introduire la première fois : “Le Code pénal (C. pén.) dispose...”, puis “(C. pén., art. 311-1).”</li>
+  </ul>
+
+  <h3>3. Exemples courants</h3>
+  <ul>
+    <li>C. civ. = Code civil</li>
+    <li>C. pén. = Code pénal</li>
+    <li>C. com. = Code de commerce</li>
+    <li>CE = Conseil d’État</li>
+    <li>CA = Cour d’appel</li>
+    <li>Cass. crim. = Chambre criminelle de la Cour de cassation</li>
+  </ul>
+
+  <h3>4. Télécharger le PDF complet</h3>
+  <p>
+    Si tu souhaites voir la liste intégrale des abréviations (juridictions, organes officiels, codes, revues...),  
+    clique sur le lien ci-dessous :
+  </p>
+  <a href="liste_abreviations_juridiques.pdf" target="_blank" class="pdf-link">
+    Voir la liste complète (PDF)
+  </a>
+
+  <h3>5. Extraits formatés : aperçu du contenu</h3>
+  <p>
+    Voici un extrait mis en tableau pour illustrer quelques entrées significatives 
+    du fichier PDF (avec libellé, abréviation et commentaire) :
+  </p>
+
+  <table class="pdf-table">
+    <thead>
+      <tr>
+        <th>Libellé</th>
+        <th>Abréviation</th>
+        <th>Commentaire</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>arrêté</td>
+        <td>A.</td>
+        <td>Dans les publications Dalloz, “arrêté” s’abrège “arr.”</td>
+      </tr>
+      <tr>
+        <td>Administration publique</td>
+        <td>A.P.</td>
+        <td>Souvent rencontré dans la documentation administrative</td>
+      </tr>
+      <tr>
+        <td>Agence d’approvisionnement d’Euratom</td>
+        <td>AAE</td>
+        <td>Organisme européen, domaine nucléaire</td>
+      </tr>
+      <tr>
+        <td>arrêté d’extension</td>
+        <td>A. extension</td>
+        <td>Dans Dalloz, “arr.” pour “arrêté”</td>
+      </tr>
+      <tr>
+        <td>Autorité bancaire européenne</td>
+        <td>ABE</td>
+        <td>Institution de l’UE</td>
+      </tr>
+      <tr>
+        <td>accord national interprofessionnel</td>
+        <td>ANI</td>
+        <td>Principalement droit social</td>
+      </tr>
+      <tr>
+        <td>Code civil</td>
+        <td>C. civ.</td>
+        <td>Ex. “C. civ., art. 1103”</td>
+      </tr>
+      <tr>
+        <td>Code pénal</td>
+        <td>C. pén.</td>
+        <td>Ex. “C. pén., art. 311-1”</td>
+      </tr>
+      <tr>
+        <td>Code des assurances</td>
+        <td>C. assur.</td>
+        <td>Ex. “C. assur., art. L. 113-2”</td>
+      </tr>
+      <tr>
+        <td>Code du travail</td>
+        <td>C. trav.</td>
+        <td>Ex. “C. trav., art. L. 1232-2”</td>
+      </tr>
+      <tr>
+        <td>Conseil de la concurrence</td>
+        <td>Cons. conc.</td>
+        <td>Devenu Autorité de la concurrence</td>
+      </tr>
+      <tr>
+        <td>Conseil constitutionnel</td>
+        <td>Cons. const.</td>
+        <td>Décisions majeures en droit constitutionnel</td>
+      </tr>
+      <tr>
+        <td>arrêté d’élargissement</td>
+        <td>A. élargissement</td>
+        <td>Dans Dalloz, “arr.” pour “arrêté”</td>
+      </tr>
+      <tr>
+        <td>Conseil d’État</td>
+        <td>CE</td>
+        <td>Plus haute juridiction administrative</td>
+      </tr>
+      <tr>
+        <td>Cahiers du DRH</td>
+        <td>CDRH</td>
+        <td>Revue spécialisée en management des ressources humaines</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    Pour plus de détails (plus de 600 lignes d’entrées : bulletins officiels, revues, codes...), 
+    consulte le fichier PDF ci-dessus.
+  </p>
+
+  <h3>6. Exemple concret</h3>
+  <div class="exemple">
+    <h4>Exemple: devoir de droit civil</h4>
+    <p>
+      “Selon le <strong>C. civ.</strong>, art. 310, la filiation repose sur… 
+      Un arrêt de la <strong>Cass. 1re civ.</strong> (12 oct. 2021) précise que… 
+      Voir commentaire dans <strong>Dr. famille</strong>, 2022, p. 14.”
+    </p>
+    <p>
+      Chaque abréviation est reconnue : C. civ. (Code civil), Cass. 1re civ. (Cour de cassation, première chambre civile), 
+      Dr. famille (Revue Droit de la famille).
+    </p>
+  </div>
+
+  <h3>7. Pourquoi c’est essentiel</h3>
+  <p>
+    Correctement employer les abréviations juridiques reflète ta maîtrise de la culture juridique, 
+    évite la lourdeur rédactionnelle et facilite la lecture.  
+    C’est un langage partagé par la doctrine, les juridictions et les professionnels du droit, 
+    indispensable pour une communication claire et concise.
+  </p>
+</section>
+
+<section class="exercice-section">
+  <h3>Exercice : Composer ta propre liste d’abréviations</h3>
+  <p>
+    Pour t’entraîner :
+  </p>
+  <ol>
+    <li>Choisis 10 abréviations courantes (codes, juridictions, revues…)</li>
+    <li>Écris la forme abrégée et la forme complète (ex. “C. consom.” = Code de la consommation)</li>
+    <li>Donne un exemple d’emploi (ex. “C. consom., art. L. 121-21”)</li>
+    <li>Compare avec le PDF pour vérifier la justesse de la forme</li>
+  </ol>
+</section>
+
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li>Les abréviations permettent un gain de place et une lecture plus rapide</li>
+    <li>Utilise celles reconnues : C. civ. pour Code civil, C. com. pour Code de commerce, etc.</li>
+    <li>Sois cohérent tout au long de ton devoir ou de ta publication</li>
+    <li>Préférer la première occurrence en toutes lettres, suivie de l’abréviation entre parenthèses</li>
+  </ul>
+</section>
+
+<div class="back-home-container">
+  <button class="back-home-btn" onclick="window.location.href='index.html'">
+    Retour à l'accueil
+  </button>
+</div>
+
+<footer>
+  <p>© 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

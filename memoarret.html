@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mémo d’Arrêt – Cours Ultra Complet (Sans Audio)</title>
+  <style>
+    /* ============== RESET & BASE ============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ============== HEADER ============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* ============== HERO (NO AUDIO) ============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ============== CONTENT ============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* EXAMPLE BOXES */
+    .exemple {
+      background: #fff5d9;
+      border-left: 5px solid #f3c978;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+    }
+    .exemple h4 {
+      font-size: 1.1rem;
+      color: #9c1c1c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* TABLE FOR EXAMPLES */
+    .example-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .example-table th,
+    .example-table td {
+      border: 1px solid #ccc;
+      padding: 0.6rem 0.8rem;
+      vertical-align: top;
+    }
+    .example-table th {
+      background: #eef1f7;
+      color: #1273b3;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    /* ============== VIDEO SECTION ============== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* ============== EXERCICE SECTION ============== */
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* ============== POINTS ESSENTIELS SECTION ============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* ============== BOUTON RETOUR ============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<section class="hero">
+  <h2>Mémo d’Arrêt : Cours Ultra Complet</h2>
+  <p>
+    Découvre ici un cours très long et détaillé sur la réalisation d’un mémo d’arrêt.  
+    Cette page ne contient pas d’audio, mais tu trouveras plus bas un lien vers une vidéo YouTube 
+    pour approfondir la méthode.
+  </p>
+</section>
+
+<section class="content">
+  <h3>1. Le mémo d’arrêt, c’est quoi ?</h3>
+  <p>
+    Le mémo d’arrêt (ou fiche d’arrêt) est un format extrêmement concis visant à **mémoriser** 
+    l’essentiel d’une décision de justice. À la différence d’un commentaire d’arrêt (plus long, plus critique), 
+    le mémo d’arrêt sert de <strong>piqûre de rappel</strong> : quelques lignes pour se souvenir des faits, 
+    de la procédure, du problème de droit et de la solution.  
+    En révision, il est idéal pour revoir un grand nombre d’arrêts sans tout relire en intégralité.
+  </p>
+
+  <h3>2. Les éléments indispensables</h3>
+  <ul>
+    <li><strong>Référence</strong> : date, juridiction (ex. “Cass. 1re civ., 12 oct. 2021, n° 19-15.234”).</li>
+    <li><strong>Faits résumés</strong> : 3-4 lignes maximum. On évite l’anecdote, on garde l’essentiel (qui poursuit qui ?, pourquoi ?).</li>
+    <li><strong>Procédure</strong> : rappel rapide (jugement 1re instance, appel, pourvoi en cassation) avec les moyens invoqués.</li>
+    <li><strong>Problème de droit</strong> : la question juridique centrale (ex. “La répudiation étrangère est-elle reconnue en France ?”). 
+        Un mémo d’arrêt sans problème de droit n’a pas de sens.</li>
+    <li><strong>Solution</strong> : rejet/cassation, fondement légal, argument clé. Quelques lignes suffisent.</li>
+    <li><strong>Intérêt</strong> (optionnel) : s’il s’agit d’un revirement, d’une confirmation d’une jurisprudence ou d’un arrêt de principe. 
+        Indique pourquoi la décision est marquante.</li>
+  </ul>
+
+  <h3>3. Les formats de présentation</h3>
+  <p>
+    Il existe divers modes, mais l’un des plus courants est le **tableau**, permettant un repérage ultra-rapide.
+  </p>
+  <table class="example-table">
+    <thead>
+      <tr>
+        <th>Rubrique</th>
+        <th>Contenu (exemple)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Référence</td>
+        <td>Cass. 2e civ., 10 mars 2022, n° 21-12.987</td>
+      </tr>
+      <tr>
+        <td>Faits & Procédure</td>
+        <td>L’employeur licencie un salarié pour faute grave. CA confirme le licenciement. Le salarié se pourvoit en cassation.</td>
+      </tr>
+      <tr>
+        <td>Problème de droit</td>
+        <td>Une suite de retards du salarié peut-elle constituer une faute grave ?</td>
+      </tr>
+      <tr>
+        <td>Solution</td>
+        <td>La chambre sociale casse l’arrêt de la CA. La faute grave suppose un comportement rendant impossible le maintien du salarié.</td>
+      </tr>
+      <tr>
+        <td>Intérêt</td>
+        <td>Rappel sur la définition stricte de la faute grave, confirmation d’une jurisprudence antérieure.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Ce format tient en peu de lignes et permet une relecture ultra-rapide.
+  </p>
+
+  <h3>4. Exemple complet – Mémo d’Arrêt avec note 20/20</h3>
+  <div class="exemple">
+    <h4>Arrêt fictif (exercice noté 20/20) :</h4>
+    <p><strong>Référence :</strong> Cass. 1re civ., 5 mai 2025, n° 24-10.345</p>
+    <p><strong>Faits & Procédure :</strong> Mme X épouse M. Y à l’étranger. À leur retour en France, elle découvre que M. Y est déjà marié. Tribunal annule le second mariage. CA confirme. M. Y se pourvoit en cassation en invoquant la liberté matrimoniale.</p>
+    <p><strong>Problème de droit :</strong> Le mariage célébré à l’étranger par une personne déjà engagée en mariage antérieur valide est-il reconnu en France ?</p>
+    <p><strong>Solution :</strong> La Cour de cassation rejette le pourvoi. Le bigame ne peut opposer la liberté matrimoniale à l’interdiction de la bigamie, contraire à l’ordre public.</p>
+    <p><strong>Intérêt :</strong> Confirmation d’une position stricte sur la bigamie et ordre public matrimonial. Rappelle l’inefficacité de la liberté matrimoniale face à la prohibition légale.</p>
+  </div>
+  <p>
+    Pourquoi 20/20 ?  
+    - Très clair, pas de détails superflus, problématique bien posée, solution limpide, intérêt concret.  
+    - Exactitude des références, bonne orthographe et présentation soignée.
+  </p>
+
+  <h3>5. Conseils de rédaction</h3>
+  <ul>
+    <li><strong>Toujours commencer</strong> par la référence de l’arrêt</li>
+    <li><strong>Limiter</strong> la partie Faits & Procédure à 5 lignes max (sinon, ce n’est plus un mémo)</li>
+    <li><strong>Formuler le problème de droit</strong> en 1 phrase interrogative ou exclamative (ex. “Y a-t-il vice du consentement ?”)</li>
+    <li><strong>Solution</strong> : 2-3 lignes, avec le motif principal et la base légale (ex. art. 1137 C. civ. pour le dol)</li>
+    <li><strong>Intérêt</strong> : si tu as le temps/la place, indique l’apport (revirement ? confirmation ?).</li>
+  </ul>
+</section>
+
+<section class="video-section">
+  <h3>Vidéo sur la Méthodologie du Mémo d’Arrêt</h3>
+  <p>
+    Ci-dessous, une vidéo YouTube pour approfondir la façon de réaliser un mémo d’arrêt :
+  </p>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/a0WVVZzHLVY"
+      title="Méthodologie du mémo d’arrêt"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="margin-top:1rem;">(Pas d’audio supplémentaire, la vidéo est un complément visuel.)</p>
+</section>
+
+<section class="exercice-section">
+  <h3>Exercice : Réalise ton propre mémo d’arrêt (Version plus longue)</h3>
+  <p>
+    Pour t’entraîner, choisis un arrêt (ou demande-en un) et suis ce plan :
+  </p>
+  <ol>
+    <li><strong>Référence complète</strong> : juridiction, date, numéro de pourvoi ou d’affaire.</li>
+    <li><strong>Faits & Procédure</strong> : en 5-7 lignes max. Ne mentionne que ce qui est crucial.</li>
+    <li><strong>Problème de droit</strong> : formule la question de façon concise (1 ou 2 phrases).</li>
+    <li><strong>Solution</strong> : indique la décision (rejet, cassation, etc.), la base légale et le raisonnement central.</li>
+    <li><strong>Intérêt</strong> (facultatif) : si l’arrêt est un revirement, un arrêt de principe ou de confirmation.</li>
+  </ol>
+  <p>
+    Tâche de ne pas dépasser 15-20 lignes au total. Relis pour éliminer tout détail superflu.
+  </p>
+
+  <h3>Exercice version “professionnelle” noté 20/20</h3>
+  <p>
+    Pour un rendu exemplaire :  
+    - Référence parfaitement notée (ex. Cass. soc., 15 janv. 2025, n° 21-17.654)  
+    - Faits synthétiques (3-4 lignes)  
+    - Problème juridique clair, en question  
+    - Solution : 2-3 lignes avec fondement légal  
+    - Intérêt : 2 lignes si c’est marquant (revirement ou arrêt confirmatif)  
+    - Orthographe irréprochable, style concis et lisible  
+  </p>
+</section>
+
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li>Le mémo d’arrêt = rappel ultra-synthétique d’une décision (fiches de révision efficaces).</li>
+    <li>On y retrouve : référence, faits, procédure, problème de droit, solution, intérêt.</li>
+    <li>Moins de 20 lignes (souvent 10 lignes max) pour rester concis.</li>
+    <li>Prépare bien le problème de droit, cœur du mémo.</li>
+    <li>Le but : se souvenir de l’arrêt sans relire toute la décision.</li>
+  </ul>
+</section>
+
+<div class="back-home-container">
+  <button class="back-home-btn" onclick="window.location.href='index.html'">
+    Retour à l'accueil
+  </button>
+</div>
+
+<footer>
+  <p>© 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

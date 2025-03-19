@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Le Cas Pratique – Cours Ultra Complet + Exemple</title>
+  <style>
+    /* =============== RESET & BASE =============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =============== HEADER =============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* =============== HERO (No Audio) =============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* =============== SUR-LIGNAGES =============== */
+    .highlight-red {
+      background-color: #ff9999;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-green {
+      background-color: #b3ff99;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-blue {
+      background-color: #99e6ff;
+      padding: 0.1rem 0.2rem;
+    }
+
+    /* =============== CONTENT SECTION =============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .definition {
+      background: #fdf8e4;
+      border-left: 5px solid #f7d97e;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 4px;
+    }
+    .definition strong {
+      color: #9c1c1c;
+    }
+
+    .exemple {
+      background: #fff5d9;
+      border-left: 5px solid #f3c978;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+    }
+    .exemple h4 {
+      font-size: 1.1rem;
+      color: #9c1c1c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* =============== VIDEO SECTION =============== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* =============== EXERCICE SECTION =============== */
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* =============== POINTS ESSENTIELS SECTION =============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* =============== BOUTON RETOUR =============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* =============== FOOTER =============== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<!-- HERO (No Audio) -->
+<section class="hero">
+  <h2>Le Cas Pratique : Cours Ultra Complet</h2>
+  <p>
+    Nous allons aborder ici la méthodologie du cas pratique, un exercice juridique incontournable. 
+    Il n’y a pas d’audio pour ce cours, mais tu trouveras un texte extrêmement détaillé, 
+    un exemple concret, un exercice, et une vidéo externe pour enrichir tes connaissances.
+  </p>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+  <h3>1. Qu’est-ce qu’un cas pratique ?</h3>
+  <p>
+    Le <span class="highlight-red">cas pratique</span> est un exercice où l’on te présente 
+    une situation fictive (ou inspirée de la réalité) dans laquelle plusieurs problèmes juridiques 
+    surgissent. Ton rôle ? Identifier ces problèmes, qualifier juridiquement les faits, 
+    appliquer la règle de droit appropriée, et proposer des solutions concrètes 
+    (conseils, actions possibles, etc.).  
+  </p>
+  <p>
+    Contrairement à la dissertation, où tu discutes de grands débats théoriques, 
+    ici tu es **dans la peau d’un juriste** face à un client ou à un dossier. 
+    L’objectif : **détecter** les points de droit pertinents (droit civil, pénal, administratif...), 
+    **analyser** les règles applicables et **conclure** sur les options ou conséquences juridiques.
+  </p>
+
+  <h3>2. Les étapes fondamentales du cas pratique</h3>
+  <p>
+    Chaque enseignant a sa méthode, mais on retrouve généralement un **schéma** type :
+  </p>
+  <ul>
+    <li><strong>Lecture minutieuse des faits</strong> : ne laisse aucun détail de côté, 
+        parfois un simple mot change la donne (ex. “le contrat est signé par procuration”, 
+        “l’enfant est âgé de 17 ans”, etc.).</li>
+    <li><strong>Identification des problèmes juridiques</strong> : quel droit est concerné ? 
+        Quelles questions se posent (responsabilité ? validité d’un contrat ? infraction pénale ?)</li>
+    <li><strong>Recherche de la règle applicable</strong> : articles de code, jurisprudences clés, principes généraux.</li>
+    <li><strong>Application au cas d’espèce</strong> : tu démontres comment la situation factuelle entre 
+        (ou non) dans le champ d’application de la règle.</li>
+    <li><strong>Conclusion pratique</strong> : tu réponds à la question posée (ex. “Madame X peut-elle obtenir réparation ?”), 
+        ou tu conseilles les protagonistes sur l’option la plus sûre.</li>
+  </ul>
+  <p>
+    Certains parlent de la méthode “**Faits – Problèmes – Règles – Solutions**” (FPRS).
+  </p>
+
+  <h3>3. Plan de présentation et rédaction</h3>
+  <p>
+    Quand tu rédiges ton cas pratique, tu peux opter pour un plan **“problème par problème”** 
+    ou un plan **“chronologique”** si l’histoire s’y prête. L’important est de **tout couvrir** 
+    et de ne pas te perdre dans un exposé théorique inutile. 
+    Concentre-toi sur les règles qui concernent directement le cas.
+  </p>
+  <ul>
+    <li><strong>Introduction très brève</strong> : parfois, on ne fait qu’une phrase de contexte 
+        et on annonce les questions à traiter.</li>
+    <li><strong>Partie I</strong> : premier problème (ex. la validité d’un contrat), 
+        exposition des faits pertinents, règles de droit, application, conclusion.</li>
+    <li><strong>Partie II</strong> : deuxième problème (ex. la responsabilité engagée), etc.</li>
+  </ul>
+  <p>
+    Selon les consignes, tu peux grouper les problèmes ou y répondre point par point dans l’ordre des faits.
+  </p>
+
+  <h3>4. Exemple concret de cas pratique fictif</h3>
+  <div class="exemple">
+    <h4>Les faits :</h4>
+    <p>
+      Paul, 17 ans, achète une moto d’occasion à Luc, via un site d’annonces en ligne. 
+      Luc certifie que la moto est en parfait état. Paul paie 2 000 €. 
+      Deux jours plus tard, la moto tombe en panne grave (problème moteur coûteux). 
+      Paul se rend compte que Luc avait déjà fait réparer la moto pour le même souci le mois précédent.
+    </p>
+    <p>
+      D’autre part, Paul, mineur non émancipé, n’avait pas l’accord de ses parents pour cette dépense importante. 
+      Ses parents menacent de demander l’annulation de la vente.  
+      Luc, de son côté, considère que la vente est ferme et qu’il n’avait pas à connaître l’âge de Paul.
+    </p>
+    <h4>Problèmes juridiques à identifier :</h4>
+    <ul>
+      <li><strong>Validité du contrat de vente</strong> : un mineur peut-il conclure un tel contrat sans l’accord parental ?</li>
+      <li><strong>Vices cachés ou dol</strong> : Luc a-t-il volontairement caché un défaut majeur ? La garantie des vices cachés est-elle applicable ?</li>
+      <li><strong>Réparation possible</strong> : Paul peut-il annuler la vente ? Exiger une réparation ou un remboursement ?</li>
+    </ul>
+    <h4>Analyse rapide :</h4>
+    <p>
+      Sur la question du mineur : 
+      - L’article 1148 du Code civil (nouvelle rédaction) indique qu’un mineur non émancipé 
+        ne peut passer un acte “important” sans autorisation.  
+      - Dès lors, le contrat peut être annulé si la dépense est jugée manifestement excessive 
+        ou si les parents s’y opposent.
+    </p>
+    <p>
+      Sur le défaut : 
+      - L’article 1641 du Code civil pose la garantie des vices cachés. 
+      - Si Luc avait connaissance du problème moteur et ne l’a pas signalé, on peut parler 
+        d’un vice caché ou même d’un dol (art. 1137 du Code civil) s’il y a manœuvre frauduleuse.  
+      - Paul pourrait demander la résolution de la vente (art. 1644 CCiv) ou une réduction de prix. 
+        En cas de dol avéré, la sanction peut être plus lourde, 
+        et Paul peut exiger des dommages-intérêts.
+    </p>
+    <h4>Conclusion pratique :</h4>
+    <p>
+      Paul dispose de fortes chances d’obtenir l’annulation de la vente :  
+      - D’une part, il est mineur, l’acte est potentiellement annulable par ses parents.  
+      - D’autre part, un vice caché ou même un dol semble caractérisé, justifiant l’action en garantie.  
+      Il lui serait donc conseillé de mettre en demeure Luc de reprendre la moto et de rembourser le prix, 
+      sous peine de saisir la juridiction compétente.
+    </p>
+  </div>
+
+  <h3>5. Définitions clés</h3>
+  <div class="definition">
+    <strong>Vice caché</strong> : défaut non apparent au moment de la vente, rendant la chose impropre à l’usage 
+    ou diminuant l’usage de façon telle que l’acheteur ne l’aurait pas achetée, ou pas à ce prix.
+  </div>
+  <div class="definition">
+    <strong>Dol</strong> : manœuvres frauduleuses ou mensonges du vendeur, visant à tromper l’acheteur 
+    sur la qualité substantielle ou la réalité d’un bien.
+  </div>
+  <div class="definition">
+    <strong>Mineur non émancipé</strong> : individu de moins de 18 ans, sans acte d’émancipation, 
+    ne pouvant en principe pas conclure d’acte important sans autorisation parentale.
+  </div>
+  <div class="definition">
+    <strong>Action en résolution</strong> : demande en justice pour annuler rétroactivement 
+    un contrat et remettre les parties dans l’état antérieur.
+  </div>
+
+  <h3>6. Conseils pratiques : la rédaction du cas pratique</h3>
+  <ul>
+    <li><strong>Bien isoler chaque problème</strong> (contrat mineur, vice caché…) : 
+        traite-les un par un, introduis chaque partie brièvement.</li>
+    <li><strong>Exposer la règle</strong> : articles du Code civil, jurisprudence notable, 
+        puis <strong>appliquer</strong> au cas (pourquoi Paul peut ou non agir). 
+        Cela évite la confusion théorique.</li>
+    <li><strong>Conclure</strong> : à la fin de chaque problème, 
+        propose un conseil ou une solution concrète. 
+        Le client veut savoir si “oui ou non” il peut annuler la vente, etc.</li>
+    <li><strong>Être concis</strong> : le cas pratique se veut fonctionnel, pas un exposé trop théorique.</li>
+  </ul>
+
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <h3>Vidéo Complémentaire</h3>
+  <p>
+    Pour aller plus loin dans la méthodologie du cas pratique, visionne cette vidéo YouTube 
+    qui illustre la démarche pas à pas :
+  </p>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/Y_6K_FKiZ8g" 
+      title="Méthodologie du Cas Pratique"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="margin-top:1rem;">
+    <em>(Aucune autre piste audio associée, cette vidéo s’ajoute au présent cours écrit.)</em>
+  </p>
+</section>
+
+<!-- EXERCICE SECTION -->
+<section class="exercice-section">
+  <h3>Exercice : Rédige ton propre cas pratique</h3>
+  <p>
+    Pour t’exercer, invente ou récupère un mini-scénario juridique (famille, contrat, pénal, etc.). 
+    Puis suis ce plan :
+  </p>
+  <ol>
+    <li>
+      <strong>Rédige les faits</strong> sur une demi-page environ, 
+      en insérant 2 ou 3 questions de droit (ex. validité d’un contrat, responsabilité délictuelle…).
+    </li>
+    <li>
+      <strong>Liste les problèmes</strong> : identifie clairement la question (“Peut-il annuler ?”, “Qui est responsable ?”).
+    </li>
+    <li>
+      <strong>Reprends la règle</strong> (articles, jurisprudences), 
+      explique-la brièvement (conditions, exceptions).
+    </li>
+    <li>
+      <strong>Applique</strong> la règle aux faits : démontre pourquoi la situation concrète 
+      remplit (ou non) les conditions légales.
+    </li>
+    <li>
+      <strong>Conclue</strong> sur la solution pratique : “La victime peut obtenir 500 € de dommages-intérêts.”, 
+      “Le contrat est annulable pour cause d’incapacité.”, etc.
+    </li>
+    <li>
+      Relis ton raisonnement, vérifie la cohérence et la logique.
+    </li>
+  </ol>
+  <p>
+    Cet entraînement te permettra de développer un **réflexe d’identification** rapide des faits pertinents 
+    et des règles à mobiliser.
+  </p>
+</section>
+
+<!-- POINTS ESSENTIELS -->
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li><strong>Analyse minutieuse</strong> des faits : un détail peut changer la solution.</li>
+    <li><strong>Identifie clairement</strong> chaque question de droit.</li>
+    <li><span class="highlight-blue">Utilise la bonne règle</span> (articles, jurisprudences, principes généraux) 
+        en la citant ou la résumant.</li>
+    <li><strong>Applique au cas</strong> : démontre pourquoi “oui” ou “non” la condition est remplie.</li>
+    <li><strong>Conclue sur la solution</strong> concrète : c’est ce qui intéresse le “client” ou le correcteur.</li>
+    <li>Privilégie <strong>clarté et concision</strong> : évite la digression théorique inutile.</li>
+  </ul>
+</section>
+
+<!-- BOUTON RETOUR ACCUEIL -->
+<div class="back-home-container">
+  <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

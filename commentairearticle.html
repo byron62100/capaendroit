@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commentaire d’Articles – Cours Très Long + Audio + Exemples</title>
+  <style>
+    /* =============== RESET & BASE =============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =============== HEADER =============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* =============== HERO (Audio) =============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .audio-wrapper {
+      margin-top: 1.5rem;
+    }
+
+    /* =============== SUR-LIGNAGES =============== */
+    .highlight-red {
+      background-color: #ff9999;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-green {
+      background-color: #b3ff99;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-blue {
+      background-color: #99e6ff;
+      padding: 0.1rem 0.2rem;
+    }
+
+    /* =============== CONTENT SECTION =============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .definition {
+      background: #fdf8e4;
+      border-left: 5px solid #f7d97e;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 4px;
+    }
+    .definition strong {
+      color: #9c1c1c;
+    }
+
+    .exemple {
+      background: #fff5d9;
+      border-left: 5px solid #f3c978;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+    }
+    .exemple h4 {
+      font-size: 1.1rem;
+      color: #9c1c1c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Fiche style */
+    .fiche {
+      background: #eef9ff;
+      border-left: 5px solid #70c2ff;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+    }
+    .fiche h4 {
+      font-size: 1.1rem;
+      color: #1273b3;
+      margin-bottom: 0.5rem;
+    }
+
+    /* =============== VIDEO SECTION =============== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* =============== EXERCICE SECTION =============== */
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* =============== POINTS ESSENTIELS SECTION =============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* =============== BOUTON RETOUR =============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* =============== FOOTER =============== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<!-- HERO (Audio) -->
+<section class="hero">
+  <h2>Commentaire d’Articles : Cours Ultra Complet</h2>
+  <p>
+    Ci-dessous se trouve un cours très long et détaillé sur la méthodologie 
+    du commentaire d’articles, accompagné d’un audio approfondi, 
+    d’exemples concrets, d’un exercice pratique et d’une vidéo externe. 
+    Aucune autre piste audio n’est associée.
+  </p>
+  <div class="audio-wrapper">
+    <audio controls>
+      <!-- Remplace par ton fichier audio: "audiocommentairearticle.wav" -->
+      <source src="audiocommentairearticle.wav" type="audio/wav">
+      Ton navigateur ne supporte pas l'élément audio.
+    </audio>
+  </div>
+</section>
+
+<!-- CONTENT - Tres Long -->
+<section class="content">
+  <h3>1. Comment définir le commentaire d’articles ?</h3>
+  <p>
+    Le <span class="highlight-red">commentaire d’articles</span> 
+    est l’analyse détaillée d’une ou plusieurs dispositions législatives ou réglementaires. 
+    L’objectif : comprendre la lettre du texte (ses mots clés, ses alinéas), 
+    son contexte (pourquoi le législateur l’a adopté), 
+    et son interprétation (jurisprudence, doctrine, débats). 
+    Cet exercice est plus “centré sur la loi” que le commentaire d’arrêt, 
+    où l’on se concentre sur la solution du juge. Ici, c’est la <strong>volonté du législateur</strong> 
+    et la structure du texte qui forment la base de la réflexion.
+  </p>
+  <p>
+    Au-delà d’un simple résumé, on attend du commentateur qu’il discute 
+    la <strong>cohérence</strong> de l’article, sa <strong>portée pratique</strong>, 
+    ses lacunes éventuelles, et ses <strong>implications</strong> 
+    pour les justiciables ou les professionnels du droit.
+  </p>
+
+  <h3>2. Les principales étapes</h3>
+  <ul>
+    <li><strong>Lecture préliminaire</strong> : repère les mots-clés, note si l’article renvoie à d’autres dispositions, 
+        vérifie s’il existe des notes de bas de page ou des références.
+    </li>
+    <li><strong>Recherche historique et législative</strong> : l’article est-il issu d’une loi récente ? 
+        A-t-il été réécrit par ordonnance ? Y a-t-il eu une directive européenne à l’origine ? 
+        Consulter éventuellement les travaux préparatoires.
+    </li>
+    <li><strong>Identifier la finalité</strong> (ratio legis) : quel problème le législateur voulait-il résoudre ? 
+        Protection d’une partie faible ? Régulation d’un secteur économique ? Harmonisation avec le droit de l’UE ?
+    </li>
+    <li><strong>Expliquer la structure</strong> : s’il y a plusieurs alinéas, 
+        chacun a-t-il un rôle distinct ? Quid des termes techniques ?
+    </li>
+    <li><strong>Analyser la jurisprudence</strong> : mentionner au moins quelques arrêts marquants 
+        ayant clarifié ou renforcé le texte, ou au contraire pointé des ambiguïtés.
+    </li>
+    <li><strong>Commentaire critique</strong> : replacer dans le système juridique. 
+        L’article est-il jugé trop restrictif ? Trop permissif ? 
+        La doctrine propose-t-elle de le réformer ? 
+        Faut-il une loi de modernisation ?
+    </li>
+  </ul>
+
+  <h3>3. Structure de la rédaction</h3>
+  <p>
+    Le plan en deux parties (I/II) est un grand classique. 
+    On pourra y inclure deux sous-parties (A/B) par partie si nécessaire :
+  </p>
+  <ul>
+    <li><strong>Partie I</strong> : Présentation générale (historique, lettre du texte, esprit, but principal)  
+        – c’est le versant “expositif”.
+    </li>
+    <li><strong>Partie II</strong> : Discussion (problèmes d’interprétation, 
+        solutions jurisprudentielles, critiques doctrinales, etc.) 
+        – c’est le versant “critique et pratique”.
+    </li>
+  </ul>
+  <p>
+    Au besoin, tu peux opter pour un plan en trois parties, 
+    si l’article est vraiment complexe ou décomposable en plusieurs axes majeurs. 
+    L’essentiel est d’éviter la simple **paraphrase** alinéa par alinéa, 
+    sans cohérence d’ensemble.
+  </p>
+
+  <h3>4. Exemple concret : Commentaire fictif de l’article L.111-1 du Code de la construction et de l’habitation</h3>
+  <div class="exemple">
+    <h4>Texte (extrait) :</h4>
+    <p>
+      « L’article L.111-1 du CCH dispose que toute nouvelle construction doit respecter 
+      un ensemble de règles visant la sécurité, la salubrité, la solidité et l’accessibilité… »
+    </p>
+    <h4>Partie I : Genèse et finalité</h4>
+    <p>
+      Issu de la loi X de 1975, cet article a été reformulé par l’ordonnance Y de 2016 
+      pour mieux prendre en compte l’accessibilité aux personnes handicapées.  
+      Son but initial est de s’assurer que chaque bâtiment respecte des normes minimales 
+      de sécurité (risques d’incendie, effondrement), d’hygiène (aération, évacuation) 
+      et d’accessibilité (rampe PMR, ascenseurs).
+    </p>
+    <p>
+      Historiquement, le législateur a voulu réduire les inégalités face au logement, 
+      permettre à chacun de se loger dans des conditions décentes. 
+      La directive européenne sur l’accessibilité (n° 2014/24/UE) a également contribué 
+      à renforcer les obligations.
+    </p>
+    <h4>Partie II : Problèmes d’application et critiques</h4>
+    <p>
+      Les maîtres d’ouvrage dénoncent parfois des coûts élevés pour se conformer 
+      aux nouvelles normes. La jurisprudence (CE, 12 février 2019) a toutefois rappelé 
+      que l’accessibilité n’est pas négociable.  
+      La doctrine souligne la difficulté d’unifier la réglementation : 
+      on a parfois des arrêtés multiples qui s’additionnent, rendant l’article L.111-1 
+      complexe à appliquer.  
+      Par ailleurs, des associations jugent les obligations encore insuffisantes 
+      pour couvrir certaines formes de handicap (sensoriel, mental).
+    </p>
+    <p>
+      La question se pose d’un projet de réforme élargissant encore la portée de cet article, 
+      afin d’inclure des obligations environnementales (isolation thermique renforcée). 
+      Certains auteurs craignent alors un empilement législatif qui pourrait nuire 
+      à la clarté du Code de la construction et de l’habitation.
+    </p>
+    <h4>Conclusion :</h4>
+    <p>
+      L’article L.111-1 du CCH reste la clé de voûte du logement décent en France. 
+      À la croisée des impératifs de sécurité, de salubrité et d’accessibilité, 
+      il constitue un pilier solide, bien que sujet à réformes successives. 
+      Ses évolutions futures viseront sans doute une plus grande cohésion environnementale, 
+      tout en veillant à ne pas accabler les acteurs du bâtiment sous une masse de normes.
+    </p>
+  </div>
+
+  <h3>5. Fiche résumée du commentaire d’article</h3>
+  <div class="fiche">
+    <h4>“Fiche direct” sur le commentaire d’article</h4>
+    <ul>
+      <li><strong>Identification :</strong> Code, numéro d’article, date du texte, loi d’origine.</li>
+      <li><strong>Historique :</strong> modifications, réformes, transpositions UE.</li>
+      <li><strong>Objet :</strong> champ d’application, objectifs (protection, régulation…)</li>
+      <li><strong>Lettre du texte :</strong> notions-clés, alinéas, exceptions.</li>
+      <li><strong>Jurisprudence</strong> : arrêts majeurs d’interprétation.</li>
+      <li><strong>Débats doctrinaux</strong> : critiques, lacunes, propositions d’amélioration.</li>
+      <li><strong>Perspectives</strong> : projets de réforme, alignement sur d’autres codes, 
+          insertion dans un contexte plus large (international, européen).</li>
+    </ul>
+  </div>
+
+  <h3>6. Définitions supplémentaires</h3>
+  <div class="definition">
+    <strong>Traveaux préparatoires</strong> : documents (rapports, débats parlementaires) 
+    qui éclairent la volonté du législateur lors de l’adoption d’une loi.
+  </div>
+  <div class="definition">
+    <strong>Ratio legis</strong> : la raison d’être de la loi (ou de l’article), 
+    l’objectif poursuivi par le législateur.
+  </div>
+  <div class="definition">
+    <strong>Directive</strong> : acte législatif européen imposant un résultat aux États membres, 
+    qui doivent transposer ses dispositions dans leur droit national.
+  </div>
+
+  <h3>7. Conseils méthodologiques supplémentaires</h3>
+  <ul>
+    <li><strong>Sois précis</strong> dans la citation ou la paraphrase du texte, 
+        mais évite le copier-coller intégral qui alourdit ta copie.</li>
+    <li><strong>Structure ta pensée</strong> : la cohérence prime sur la simple découpe alinéa par alinéa.</li>
+    <li><strong>Ne néglige pas la doctrine</strong> : quelques références d’auteurs (ex. “selon Dupont, 
+        cette disposition est obsolète…”) peuvent faire la différence.</li>
+    <li><strong>Inutile de tout dire</strong> : sois ciblé, privilégie les points de débat ou les innovations notables.</li>
+    <li><strong>Conclusion brève</strong> : redire l’apport de l’article et proposer une réflexion finale, 
+        sans ouvrir un nouveau débat.</li>
+  </ul>
+
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <h3>Vidéo Complémentaire</h3>
+  <p>
+    Pour renforcer encore ta maîtrise de la méthodologie, voici une vidéo YouTube 
+    expliquant d’autres astuces et exemples concrets sur le commentaire d’articles :
+  </p>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/IaAiBqIUTh4" 
+      title="Méthodologie du Commentaire d'article"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="margin-top:1rem;">
+    <em>(Aucune autre audio associée, cette vidéo vient compléter le présent cours.)</em>
+  </p>
+</section>
+
+<!-- EXERCICE SECTION -->
+<section class="exercice-section">
+  <h3>Exercice : Réalise un commentaire d’article</h3>
+  <p>
+    Pour mettre en pratique toute cette méthodologie, choisis un article de code 
+    (Code civil, Code pénal, Code de la consommation, etc.), et suis ces étapes :
+  </p>
+  <ol>
+    <li>
+      <strong>Lecture initiale</strong> : repère la structure, les mots-clés, 
+      et vérifie si l’article est associé à d’autres (alinéas, renvois).
+    </li>
+    <li>
+      <strong>Recherche historique</strong> : date de création, éventuelles réformes, 
+      travaux préparatoires si disponibles.
+    </li>
+    <li>
+      <strong>Fais un plan</strong> (I/II) :  
+      - Partie I : présentation, raison d’être, contenu principal de l’article.  
+      - Partie II : interprétation jurisprudentielle, critiques doctrinales, perspectives de réforme.
+    </li>
+    <li>
+      <strong>Rédige l’introduction</strong> : accroche (pourquoi l’article est intéressant), 
+      contexte (code concerné, loi d’origine), problème ou question qu’il soulève.
+    </li>
+    <li>
+      <strong>Développe</strong> la Partie I et la Partie II, en citant au moins un ou deux arrêts 
+      ou commentaires doctrinaux. Explique les enjeux pratiques.
+    </li>
+    <li>
+      <strong>Conclue</strong> : rappelle en quoi l’article est crucial, 
+      mentionne une éventuelle évolution future, évite de lancer un nouveau débat.
+    </li>
+    <li>
+      <strong>Relis-toi</strong> pour t’assurer de la cohérence du plan 
+      et de la présence des références nécessaires (articles de lois reliés, arrêts, etc.).
+    </li>
+  </ol>
+  <p>
+    Compare ensuite ta production au modèle fourni dans ce cours 
+    pour évaluer la clarté et la profondeur de ton analyse.
+  </p>
+</section>
+
+<!-- POINTS ESSENTIELS -->
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li><strong>Commence par</strong> le contexte : code, chapitre, objectifs législatifs.</li>
+    <li><span class="highlight-blue">Analyse la lettre</span> : mot-clé, alinéas, renvois à d’autres articles.</li>
+    <li><span class="highlight-red">Historique législatif</span> : toute évolution est un indice de la volonté du législateur.</li>
+    <li>Ne néglige pas la <strong>jurisprudence</strong> : montre comment les juges appliquent l’article.</li>
+    <li><strong>Critique</strong> et perspectives : lacunes, débats doctrinaux, réforme potentielle.</li>
+    <li>Plan I/II bien structuré, <strong>conclusion brève</strong> pour finaliser.</li>
+  </ul>
+</section>
+
+<!-- BOUTON RETOUR ACCUEIL -->
+<div class="back-home-container">
+  <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

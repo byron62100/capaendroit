@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commentaire d’arrêt – Cours Ultra Complet avec Audio</title>
+  <style>
+    /* =============== RESET & BASE =============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =============== HEADER =============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* =============== HERO SECTION =============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .audio-wrapper {
+      margin-top: 1.5rem;
+    }
+
+    /* =============== SUR-LIGNAGES =============== */
+    .highlight-red {
+      background-color: #ff9999;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-green {
+      background-color: #b3ff99;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-blue {
+      background-color: #99e6ff;
+      padding: 0.1rem 0.2rem;
+    }
+
+    /* =============== CONTENT SECTION =============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .content p,
+    .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .definition {
+      background: #fdf8e4;
+      border-left: 5px solid #f7d97e;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 4px;
+    }
+    .definition strong {
+      color: #9c1c1c;
+    }
+
+    .exemple {
+      background: #fff5d9;
+      border-left: 5px solid #f3c978;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      border-radius: 6px;
+    }
+    .exemple h4 {
+      font-size: 1.1rem;
+      color: #9c1c1c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* =============== VIDEO SECTION =============== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* =============== EXERCICE SECTION =============== */
+    .exercice-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .exercice-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .exercice-section p {
+      margin-bottom: 1rem;
+    }
+    .exercice-section ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: decimal;
+    }
+    .exercice-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* =============== POINTS ESSENTIELS SECTION =============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* =============== BOUTON RETOUR =============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* =============== FOOTER =============== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<!-- HERO (avec audio) -->
+<section class="hero">
+  <h2>Le Commentaire d’Arrêt : Méthodologie et Exemple</h2>
+  <p>
+    Dans ce cours, nous expliquons en détail comment réussir un commentaire d’arrêt. 
+    Tu trouveras ci-dessous un fichier audio très complet, un texte de cours approfondi, 
+    un exemple concret, un exercice pour t’entraîner et une vidéo externe pour aller plus loin.
+    Note qu’il n’y a pas d’autres audios complémentaires.
+  </p>
+  <!-- Audio Player -->
+  <div class="audio-wrapper">
+    <audio controls>
+      <source src="audiocommentairedarret.wav" type="audio/wav">
+      Ton navigateur ne supporte pas l’élément audio.
+    </audio>
+  </div>
+</section>
+
+<!-- CONTENT: Le Cours Tres Long -->
+<section class="content">
+  <h3>1. Le commentaire d’arrêt : un exercice pivot en droit</h3>
+  <p>
+    Le <span class="highlight-red">commentaire d’arrêt</span> constitue l’une des épreuves reines 
+    du parcours juridique. Il impose au futur juriste de décrypter la structure 
+    et la portée d’une décision de justice, souvent émise par la Cour de cassation 
+    ou le Conseil d’État. L’enjeu : montrer sa capacité à analyser la logique suivie 
+    par le juge, à extraire la règle de droit dégagée, et à en évaluer la cohérence 
+    par rapport au système juridique.
+  </p>
+  <p>
+    Au-delà d’un simple résumé, le commentaire d’arrêt exige <strong>argumentation</strong>, 
+    <strong>culture juridique</strong> et <strong>sens de la synthèse</strong>. 
+    C’est un exercice qui habitue à la lecture critique de la jurisprudence, 
+    préparant ainsi à la pratique quotidienne du droit, où l’interprétation des décisions 
+    est primordiale.
+  </p>
+
+  <h3>2. Les étapes clés du commentaire d’arrêt</h3>
+  <p>
+    Pour ne rien omettre, voici un schéma détaillé :
+  </p>
+  <ul>
+    <li>
+      <strong>Lecture initiale</strong>: une première découverte de l’arrêt pour en saisir le contexte global. 
+      Puis une seconde lecture plus précise, pour noter les points essentiels (faits, procédure, thèse de chaque partie).
+    </li>
+    <li>
+      <strong>Identification du problème de droit</strong>: la question juridique principale 
+      que la juridiction doit trancher. Par exemple, “une clause est-elle abusive ?” ou “un principe constitutionnel 
+      est-il respecté ?”.
+    </li>
+    <li>
+      <strong>Préparation du plan</strong>: la plupart du temps, un plan en deux parties (I/II), 
+      chacune divisée en A/B, demeure la norme. Partie I plus descriptive (exposer les faits, la procédure, 
+      la solution), Partie II plus critique ou analytique (placer l’arrêt dans son évolution jurisprudentielle, 
+      évaluer sa cohérence). 
+    </li>
+    <li>
+      <strong>Rédaction de l’intro</strong>: phrase d’accroche, rappel succinct des faits et de la procédure, 
+      énoncé du problème de droit, annonce du plan.
+    </li>
+    <li>
+      <strong>Analyse de la décision</strong>: si c’est une cassation, pourquoi ? Sur quel article ? 
+      S’agit-il d’un revirement de jurisprudence, d’une solution attendue ou d’une innovation  ?
+    </li>
+    <li>
+      <strong>Conclusion</strong>: synthèse de l’apport de l’arrêt et ouverture (réforme législative, 
+      future jurisprudence possible).
+    </li>
+  </ul>
+
+  <h3>3. Points de vigilance</h3>
+  <p>
+    <span class="highlight-blue">Premièrement</span>, veille à la <strong>neutralité</strong> dans la partie factuelle 
+    (ne prends pas parti, contente-toi de relater fidèlement les faits et la procédure).  
+    <span class="highlight-red">Deuxièmement</span>, sois <strong>précis</strong> sur la référence légale 
+    ou réglementaire : cite l’article exact, la date de l’arrêt, la formation de la Cour.  
+    <span class="highlight-green">Troisièmement</span>, ne néglige pas la dimension contextuelle : 
+    un arrêt ne surgit jamais ex nihilo, il s’inscrit souvent dans une suite de décisions ou un débat doctrinal.
+  </p>
+
+  <div class="exemple">
+    <h4>Exemple concrêt : Arrêt fictif du Conseil d’État (2026)</h4>
+    <p>
+      <strong>Faits</strong>: un administré conteste la légalité d’un arrêté municipal 
+      imposant des restrictions de circulation jugées excessives. Il estime que l’arrêté porte 
+      atteinte à la liberté de circulation garantie par la Constitution.
+    </p>
+    <p>
+      <strong>Procédure</strong>: le Tribunal administratif rejette la requête, 
+      la Cour administrative d’appel confirme. L’administré forme un pourvoi devant le Conseil d’État 
+      pour excès de pouvoir.
+    </p>
+    <p>
+      <strong>Problème de droit</strong>: la municipalité peut-elle, au nom de la sécurité routière, 
+      restreindre de manière importante la circulation automobile, 
+      sans disproportion par rapport à l’objectif poursuivi ? 
+    </p>
+    <p>
+      <strong>Solution</strong>: le Conseil d’État annule l’arrêté, 
+      relevant l’absence d’étude d’impact et le caractère excessif des mesures 
+      portant atteinte au principe de proportionnalité. Il juge que les restrictions excèdent 
+      ce qui est nécessaire à la sécurité.
+    </p>
+    <p>
+      <strong>Analyse critique</strong>: l’arrêt illustre la prise en compte grandissante 
+      du principe de proportionnalité dans le contentieux administratif. 
+      Il s’inscrit dans la lignée d’une jurisprudence attentive aux libertés publiques, 
+      rappelant que l’autorité municipale ne dispose pas d’une discrétion absolue. 
+      Une approche cohérente avec les précédents arrêts CE, 2019, “Commune de X...”. 
+      Les commentateurs y verront une confirmation de la nécessité d’un contrôle rigoureux 
+      pour toute mesure restrictive de droit.
+    </p>
+  </div>
+
+  <h3>4. Définitions utiles</h3>
+  <div class="definition">
+    <strong>Pourvoi</strong>: recours porté devant la Cour de cassation ou le Conseil d’État 
+    pour contester un jugement ou un arrêt d’appel, souvent pour violation de la loi ou vice de procédure.
+  </div>
+  <div class="definition">
+    <strong>Revirement de jurisprudence</strong>: décision où la juridiction change d’orientation 
+    par rapport à ses solutions antérieures.
+  </div>
+  <div class="definition">
+    <strong>Excès de pouvoir</strong>: en droit administratif, recours permettant de faire annuler un acte illégal 
+    (arrêté, décret) pris par une autorité administrative. 
+  </div>
+  <div class="definition">
+    <strong>Principe de proportionnalité</strong>: principe selon lequel la mesure prise par l’autorité publique 
+    ne doit pas dépasser ce qui est nécessaire pour atteindre l’objectif d’intérêt général poursuivi.
+  </div>
+
+  <h3>5. Méthodologie de rédaction détaillée</h3>
+  <p>
+    <strong>Introduction</strong>:  
+    - Accroche (chiffres, contexte, allusion historique),  
+    - Rappel concis des faits et de la procédure,  
+    - Énoncé limpide de la question juridique soulevée,  
+    - Annonce du plan (le plus souvent I/II).
+  </p>
+  <p>
+    <strong>Partie I</strong>: exposer la teneur de la décision, son fondement légal ou réglementaire, 
+    et dégager l’idée directrice. Tu peux y inclure des éléments d’explication (pourquoi la Cour a-t-elle 
+    statué ainsi ?), en restant assez descriptif.
+  </p>
+  <p>
+    <strong>Partie II</strong>: partie critique où tu discutes la portée de la solution. 
+    S’agit-il d’une jurisprudence confirmative, d’un revirement, d’une application inédite d’un texte ? 
+    Quels sont les arguments doctrinaux qui approuvent ou désapprouvent cette orientation ? 
+    Quelles conséquences pratiques (pour les justiciables, les professionnels du droit) ?
+  </p>
+  <p>
+    <strong>Conclusion</strong>: rappelle l’apport essentiel de la décision, 
+    indique une éventuelle ouverture (perspective de réforme, position contraire d’une autre juridiction). 
+    Le tout en 5 ou 6 lignes maximum, pour terminer sur une note synthétique et cohérente.
+  </p>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <h3>Vidéo Complémentaire : Comment bien commenter un arrêt</h3>
+  <p>
+    Pour affiner encore ta technique, voici une vidéo YouTube très pédagogique, 
+    expliquant le plan et la démarche à adopter pour réussir ton commentaire d’arrêt :
+  </p>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/sFPpvmX9fSE" 
+      title="Méthodologie du Commentaire d'arrêt"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="margin-top:1rem;">
+    <em>(Cette vidéo est externe et vient simplement compléter ce cours sans autre audio.)</em>
+  </p>
+</section>
+
+<!-- EXERCICE SECTION -->
+<section class="exercice-section">
+  <h3>Exercice : Rédige ton propre commentaire d’arrêt</h3>
+  <p>
+    Pour mettre en pratique les nombreuses étapes évoquées, voici un exercice structuré. 
+    Choisis un arrêt récent ou marquant (en droit civil, administratif, pénal, peu importe) 
+    et suis ces étapes :
+  </p>
+  <ol>
+    <li>
+      <strong>Lecture</strong> et prise de notes : relève les faits clés, la procédure, 
+      la question de droit et la solution. Note au passage tout article ou principe invoqué.
+    </li>
+    <li>
+      <strong>Formule la problématique</strong> : question centrale que la juridiction doit trancher. 
+      S’agit-il d’un litige contractuel, d’une clause abusive, d’un excès de pouvoir, etc. ?
+    </li>
+    <li>
+      <strong>Élabore un plan</strong> (souvent un I/II, chacun divisé en A/B). 
+      Partie I = exposer et expliquer la décision, Partie II = discussion critique.
+    </li>
+    <li>
+      <strong>Rédige l’intro</strong> en 10-15 lignes : accroche, rappels des faits et de la procédure (brièvement), 
+      identification du problème de droit, et annonce du plan.
+    </li>
+    <li>
+      <strong>Développe la Partie I</strong> en expliquant la solution rendue, 
+      puis la Partie II en évaluant les conséquences et la logique de la décision. 
+      Illustre par des références législatives ou doctrinales.
+    </li>
+    <li>
+      <strong>Conclue</strong> en résumant l’apport de la décision et en ouvrant sur un débat futur (réforme, jurisprudence étrangère).
+    </li>
+    <li>
+      <strong>Relis-toi</strong> : vérifie la clarté, la cohérence et l’absence de fautes. 
+      Montre ensuite ton commentaire à un camarade ou un enseignant pour un retour critique.
+    </li>
+  </ol>
+  <p>
+    Cet exercice t’entraînera à la rigueur, à l’esprit d’analyse et à la mise en perspective, 
+    qualités indispensables en droit.
+  </p>
+</section>
+
+<!-- POINTS ESSENTIELS -->
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li><strong>Sois neutre</strong> pour relater les faits et la procédure.</li>
+    <li><strong>La problématique</strong> est le pivot : clarifie-la dès l’intro.</li>
+    <li><strong>Articles, jurisprudence, doctrine</strong> : mobilise-les pour étayer ou questionner la décision.</li>
+    <li><span class="highlight-blue">Plan cohérent</span> : I/II, en explicitant ta logique de commentaire (expliquer puis critiquer).</li>
+    <li>Les <strong>transitions</strong> entre parties (ou sous-parties) assurent la fluidité du texte.</li>
+    <li><strong>La conclusion</strong> doit récapituler et ouvrir une perspective, sans lancer de nouveau débat.</li>
+  </ul>
+</section>
+
+<!-- BOUTON RETOUR ACCUEIL -->
+<div class="back-home-container">
+  <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

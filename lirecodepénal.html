@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lire le Code Civil, le Code Pénal et leurs Procédures</title>
+  <style>
+    /* =============== RESET & BASE =============== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =============== HEADER =============== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    /* =============== HERO SECTION =============== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* =============== SUR-LIGNAGES =============== */
+    .highlight-red {
+      background-color: #ff9999;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-green {
+      background-color: #b3ff99;
+      padding: 0.1rem 0.2rem;
+    }
+    .highlight-blue {
+      background-color: #99e6ff;
+      padding: 0.1rem 0.2rem;
+    }
+
+    /* =============== CONTENT SECTION =============== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      color: #9c1c1c;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+    .content p, .content li {
+      margin-bottom: 1rem;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .definition {
+      background: #fdf8e4;
+      border-left: 5px solid #f7d97e;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .definition strong {
+      color: #9c1c1c;
+    }
+
+    /* =============== VIDEO SECTION =============== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* =============== POINTS ESSENTIELS SECTION =============== */
+    .points-essentiels {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .points-essentiels h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .points-essentiels ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .points-essentiels li {
+      margin: 0.5rem 0;
+    }
+
+    /* =============== BOUTON RETOUR =============== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* =============== FOOTER =============== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <!-- Logo : vérifie que "logo.png" se trouve dans le même dossier -->
+  <img src="logo.png" alt="Logo Capacité en droit" class="header__logo">
+  <h1>Capacité en droit - By Byron</h1>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Lire le Code Civil, le Code Pénal… et leurs Procédures</h2>
+  <p>
+    Comprendre la <span class="highlight-green">lettre de la loi</span> implique 
+    de distinguer codes de fond (civil, pénal) et codes de procédure (civile, pénale).  
+    Ici, vous trouverez une méthodologie détaillée, des exemples concrets et un aperçu 
+    d’une vidéo explicative pour mieux aborder ces textes fondamentaux.
+  </p>
+</section>
+
+<!-- CONTENT: Les Explications & Exemples -->
+<section class="content">
+
+  <h3>1. Code civil vs. Code de procédure civile</h3>
+  <p>
+    Le <strong>Code civil</strong> définit les principes juridiques régissant la vie privée :  
+    contrats, responsabilité, famille, successions, etc.  
+    Le <strong>Code de procédure civile</strong>, lui, précise <em>“comment”</em> se déroule un 
+    procès civil (juridiction compétente, délais, formes d’assignation…).
+  </p>
+  <div class="definition">
+    <strong>Exemple concret :</strong><br>
+    Vous avez un litige sur la validité d’un contrat de vente :  
+    - <em>Code civil</em> : articles précisant les obligations réciproques, la cause, la nullité…  
+    - <em>Procédure civile</em> : articles indiquant devant quel tribunal on doit ester, 
+      la manière d’assigner, les règles d’appel, etc.
+  </div>
+
+  <h3>2. Code pénal vs. Code de procédure pénale</h3>
+  <p>
+    Le <strong>Code pénal</strong> décrit les <span class="highlight-blue">infractions</span> 
+    (contraventions, délits, crimes) et les peines encourues.  
+    Le <strong>Code de procédure pénale</strong> énonce les étapes de l’enquête, 
+    de la poursuite et du jugement (garde à vue, instruction, audience, appel…).
+  </p>
+  <div class="definition">
+    <strong>Définitions clés :</strong><br>
+    • <em>Infraction</em> : acte ou omission prohibé par la loi, passible d'une sanction (ex. vol, escroquerie).<br>
+    • <em>Dol</em> : intention coupable, volonté de commettre l’infraction.<br>
+    • <em>Instruction</em> : phase d’enquête approfondie dirigée par un juge d’instruction pour les délits et crimes les plus graves.
+  </div>
+  <p>
+    <span class="highlight-red">Exemple :</span>  
+    - Art. 311-1 du Code pénal : “Le vol est la soustraction frauduleuse de la chose d’autrui.”  
+    - <em>Procédure pénale</em> : explique comment la police/l’enquêteur interroge les suspects, 
+      le rôle du procureur, la tenue du procès en audience.
+  </p>
+
+  <h3>3. Comment apprendre à les lire ?</h3>
+  <ul>
+    <li><span class="highlight-blue">Parcourir le sommaire</span> : chaque code est découpé en livres, titres, chapitres, articles.  
+        Identifiez la section voulue (ex. “Obligations contractuelles” ou “Crimes contre les biens”).</li>
+    <li><strong>Surligner les termes-clés</strong> : “responsabilité”, “peine”, “dol”, “compétence”.  
+        Cherchez leurs définitions dans la doctrine ou la jurisprudence.</li>
+    <li><strong>Comparer fond et procédure</strong> :  
+        Si vous lisez un article sur la légitime défense (Code pénal), 
+        voyez comment le procès se déroulera en cas de contestation (Procédure pénale).</li>
+    <li><strong>Fiches & tableaux</strong> :  
+        lister les articles importants, les liens entre codes, les cas pratiques notables.</li>
+    <li><strong>Mises à jour</strong> :  
+        Les lois évoluent (réformes du Code civil, modifications du Code pénal...).  
+        Vérifiez la version la plus récente (Légifrance, codes annotés Dalloz/Lexis).</li>
+  </ul>
+
+  <h3>4. Exemples Concrets</h3>
+  <p>
+    <strong>Exemple 1&nbsp;:</strong> Rupture de fiançailles  
+    - <em>Code civil</em> : articles sur la promesse de mariage, les conséquences éventuelles…  
+    - <em>Procédure civile</em> : règles du litige (quel tribunal saisir, délais, etc.).  
+  </p>
+  <p>
+    <strong>Exemple 2&nbsp;:</strong> Vol aggravé  
+    - <em>Code pénal</em> : aggravations (violence, arme, réunion...)  
+    - <em>Procédure pénale</em> : phases de l’enquête, droits du mis en examen, audition des témoins, etc.
+  </p>
+
+  <h3>5. D’autres codes de fond et de procédure</h3>
+  <p>
+    Il existe de nombreux autres codes : <strong>Code de commerce</strong> (actes de commerce, sociétés), 
+    <strong>Code du travail</strong> (relation employeur-salarié), 
+    <strong>Code de la route</strong> (règles de circulation, infractions routières) …  
+    En capacité en droit, vous étudierez surtout le civil/pénal et leurs procédures, 
+    mais sachez que chaque domaine suit une structure similaire.
+  </p>
+
+</section>
+
+<!-- SECTION VIDEO -->
+<section class="video-section">
+  <h3>Vidéo explicative</h3>
+  <p>
+    Pour approfondir la distinction entre ces codes 
+    et découvrir d’autres astuces de lecture, 
+    voici une courte vidéo YouTube :
+  </p>
+  <div class="video-wrapper">
+    <!-- Remplace la fin de l'URL d'embed si tu as une autre vidéo -->
+    <iframe 
+      src="https://www.youtube.com/embed/GgsvushTXmo" 
+      title="Comment lire les Codes"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="margin-top:1rem;">
+    <em>
+      (Cette vidéo n’est pas accompagnée d’un audio supplémentaire sur la page, 
+      mais constitue un complément visuel et pratique.)
+    </em>
+  </p>
+</section>
+
+<!-- POINTS ESSENTIELS -->
+<section class="points-essentiels">
+  <h3>Points Essentiels</h3>
+  <ul>
+    <li><strong>Code civil</strong> et <strong>code pénal</strong> = règles de fond ;  
+        <strong>procédure civile</strong> et <strong>procédure pénale</strong> = “comment” se déroule le procès.</li>
+    <li>Lire la structure (livres, titres, articles), <em>repérer les mots-clés</em>, 
+        comprendre les renvois (article X fait référence à article Y).</li>
+    <li>Ne pas hésiter à <span class="highlight-blue">jumeler</span> fond et procédure dans un même cas pratique (ex. vol, rupture contractuelle).</li>
+    <li>Faire des fiches ou tableaux comparatifs pour lier le code de fond et le code de procédure.</li>
+    <li><span class="highlight-green">Mettre à jour ses connaissances</span> : Légifrance, codes annotés récents (Dalloz, LexisNexis).</li>
+    <li>Prendre le temps de <em>définir chaque terme</em> (dol, compétence, instruction, etc.) pour développer un vocabulaire précis.</li>
+  </ul>
+</section>
+
+<!-- BOUTON RETOUR -->
+<div class="back-home-container">
+  <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 - Byron - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

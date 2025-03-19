@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>S’organiser en étudiant(e) hyper efficace</title>
+  <style>
+    /* ===================== RESET & BASE ===================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===================== HEADER (FIXE) ===================== */
+    header {
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    /* ===================== SECTION HERO ===================== */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      max-width: 600px;
+    }
+
+    /* ===================== SECTION CONTENU ===================== */
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .content h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+    }
+    .content p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .content li {
+      margin: 0.5rem 0;
+    }
+
+    .highlight {
+      background-color: #ffe066; /* Surlignage jaune clair */
+      padding: 0.1rem 0.2rem;
+    }
+
+    /* ===================== SECTION VIDEO ===================== */
+    .video-section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.2rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 560px;
+      height: 315px;
+      max-width: 100%;
+    }
+
+    /* ===================== BOUTON RETOUR ACCUEIL ===================== */
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* ===================== MEDIA QUERIES ===================== */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 1.5rem;
+      }
+      .content {
+        padding: 1.5rem;
+      }
+      .video-section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <!-- Décommente si tu as un logo
+    <img src="logo.png" alt="Logo Capacité en droit" class="header__logo"> -->
+    <h1>Capacité en droit - By Byron</h1>
+  </header>
+
+  <!-- SECTION HERO -->
+  <section class="hero">
+    <h2>S’organiser en étudiant(e) hyper efficace</h2>
+    <p>
+      Apprenez ici la raison profonde d’une bonne organisation, 
+      ainsi que des méthodes concrètes pour optimiser votre planning, 
+      vos révisions et votre sérénité. 
+      <br><br>
+      <span class="highlight">Note :</span> Il n’y a pas d’audio dédié sur cette page, 
+      mais une <span class="highlight">vidéo YouTube</span> plus bas 
+      vous présente une autre approche possible.
+    </p>
+  </section>
+
+  <!-- SECTION CONTENU PRINCIPAL -->
+  <section class="content">
+    <h3>Le “pourquoi” : s’organiser, c’est gagner en clarté</h3>
+    <p>
+      Dans le cadre d’études de droit, on est vite confronté(e) à une masse 
+      d’informations : codes, jurisprudences, manuels, articles doctrinaux. 
+      <span class="highlight">Sans une structure claire</span>, 
+      on peut se retrouver dispersé(e), sauter d’un chapitre à l’autre 
+      sans jamais approfondir correctement. Par ailleurs, le stress monte 
+      quand on ne sait plus quoi réviser ni à quel moment.
+    </p>
+    <p>
+      Alors, pourquoi s’organiser ? 
+      <strong>Pour éviter de naviguer à vue</strong> et, au contraire, 
+      <em>avoir la main</em> sur notre progression : 
+      quels chapitres ai-je déjà bossés ? Qu’est-ce qui me reste à faire ? 
+      Combien de temps est-ce que je peux y consacrer ?
+    </p>
+
+    <h3>Exemple concret : “La semaine-type de Louise”</h3>
+    <p>
+      Imaginons Louise, étudiante en Capacité en droit, qui travaille 
+      le matin comme employée dans un café. Chaque jour, elle rentre 
+      vers 14h, un peu fatiguée. Elle a remarqué qu’elle est plus 
+      productive en fin d’après-midi. Son organisation va consister à :
+    </p>
+    <ul>
+      <li>
+        Bloquer <span class="highlight">2h</span> de 16h à 18h pour sa révision 
+        quotidienne (lecture de fiches, cas pratiques).
+      </li>
+      <li>
+        Conserver le soir (après 20h) pour 
+        <span class="highlight">relire</span> ce qu’elle a vu dans la journée.
+      </li>
+      <li>
+        Le samedi matin, elle consacre <span class="highlight">3h</span> 
+        à faire des fiches de synthèse (surlignage, mise en forme).
+      </li>
+    </ul>
+    <p>
+      Louise sait ainsi que la majeure partie de son apprentissage 
+      se déroule <strong>aux moments où elle est la plus en forme</strong>. 
+      Elle respecte ses horaires de travail sans sacrifier ses études. 
+      <em>Ses week-ends ne sont pas 100 % révisions</em>, ce qui la motive 
+      à tenir le rythme sur la durée.
+    </p>
+
+    <h3>Principes méthodologiques : pas-à-pas</h3>
+    <ol style="margin-left:1.5rem; margin-bottom:1.5rem;">
+      <li><strong>Diagnostiquer sa disponibilité</strong><br>
+      Listez vos contraintes (travail, obligations familiales, etc.) 
+      et repérez les créneaux libres où vous êtes <em>plutôt alerte</em>.</li>
+
+      <li><strong>Se fixer des objectifs réalistes</strong><br>
+      Décider par exemple : “Cette semaine, je termine 
+      la lecture du chapitre sur la responsabilité civile 
+      et je fais un cas pratique dessus.”</li>
+
+      <li><strong>Allier théorie et pratique</strong><br>
+      Lire un chapitre, puis le soir même, essayer un quiz 
+      ou un cas pratique pour vérifier sa compréhension.</li>
+
+      <li><strong>Évaluer et ajuster</strong><br>
+      Si vous voyez que 2h par jour ne suffisent pas, 
+      ajoutez un créneau. Si c’est trop, ralentissez pour 
+      ne pas vous décourager.</li>
+    </ol>
+
+    <p>
+      <span class="highlight">Rappelez-vous</span> : 
+      être méthodique ne veut pas dire être rigide. 
+      Vous pouvez toujours modifier votre planning 
+      en fonction de la fatigue, d’un imprévu, ou 
+      d’une opportunité de travailler en groupe.
+    </p>
+
+    <h3>Différences de méthodes : ce n’est pas grave !</h3>
+    <p>
+      Chaque formateur, chaque vidéo ou ouvrage peut proposer 
+      un cheminement différent. 
+      L’essentiel, c’est de comprendre la logique de fond : 
+      <strong>découper</strong> son travail, <strong>fixer</strong> des objectifs, 
+      <strong>vérifier</strong> régulièrement sa compréhension 
+      et <strong>ajuster</strong> en fonction des résultats. 
+      La vidéo ci-dessous en est un exemple parmi d’autres. 
+      Peut-être moins détaillé sur l’aspect “fiche de révision”, 
+      mais plus axé sur le “rituel” du matin, ou inversement.
+    </p>
+  </section>
+
+  <!-- SECTION VIDÉO (YouTube) -->
+  <section class="video-section">
+    <h3>Une autre approche en vidéo</h3>
+    <p>
+      Ci-dessous, vous trouverez un <span class="highlight">lien YouTube</span> 
+      présentant une méthodologie alternative. Encore une fois, 
+      le plus important est de <strong>puiser ce qui résonne en vous</strong>, 
+      d’expérimenter, et de concocter votre propre recette pour étudier 
+      efficacement sans vous épuiser.
+    </p>
+    <div class="video-wrapper">
+      <!-- Intégration en iframe de la vidéo YouTube -->
+      <iframe 
+        src="https://www.youtube.com/embed/ov5H2V0Cus8" 
+        title="Méthode d'organisation - Vidéo YouTube"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p style="margin-top:1rem;">
+      <em>
+        (Cette vidéo n’est pas nécessairement liée à la méthode présentée ci-dessus, 
+        mais peut la compléter ou vous apporter d’autres idées.)
+      </em>
+    </p>
+  </section>
+
+  <!-- BOUTON RETOUR ACCUEIL -->
+  <div class="back-home-container">
+    <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 - Byron - Tous droits réservés</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Pour l’instant, rien de spécial, 
+    // mais tu pourrais y mettre des animations ou autres fonctionnalités
+  </script>
+
+</body>
+</html>
