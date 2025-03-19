@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Capacité en Droit – Accueil (By Byron)</title>
+  <style>
+    /* ============= RESET & BASE ============= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 0.5rem;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ============= HEADER ============= */
+    header {
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    .header__logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem 0;
+    }
+
+    /* ============= HERO SECTION ============= */
+    .hero {
+      max-width: 1100px;
+      margin: 1.5rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+      color: #9c1c1c;
+    }
+    .hero p {
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+      max-width: 700px;
+      margin: 0.5rem auto;
+    }
+    .audio-wrapper {
+      margin-top: 1rem;
+    }
+    .divider {
+      width: 60%;
+      height: 1px;
+      background: #ccc;
+      margin: 1.2rem auto;
+      border: none;
+    }
+
+    /* ============= SECTION METHODOLOGIE ============= */
+    .section-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+    }
+    .section-container h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      color: #9c1c1c;
+      text-align: center;
+    }
+    .section-container p {
+      margin-bottom: 1rem;
+      max-width: 700px;
+      margin: 0.5rem auto;
+      line-height: 1.4;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 1rem;
+      transition: box-shadow 0.3s;
+    }
+    .card:hover {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      color: #9c1c1c;
+      margin-bottom: 0.5rem;
+    }
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .card ul li {
+      margin: 0.4rem 0;
+    }
+    .card ul li a {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .card ul li a:hover {
+      background: #b82727;
+    }
+
+    /* ============= TOP 3 CONSEILS ============= */
+    .tips-section {
+      max-width: 1100px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+    }
+    .tips-section h2 {
+      font-size: 1.3rem;
+      color: #9c1c1c;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .tip-box {
+      background: #fefefe;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 1rem;
+      transition: box-shadow 0.3s;
+    }
+    .tip-box:hover {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .tip-box h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #9c1c1c;
+    }
+
+    /* ============= FAQ SECTION ============= */
+    .faq-section {
+      max-width: 1100px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+    }
+    .faq-section h2 {
+      font-size: 1.3rem;
+      color: #9c1c1c;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .faq-question {
+      margin-bottom: 1rem;
+    }
+    .faq-question h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #9c1c1c;
+    }
+    .faq-question p {
+      line-height: 1.4;
+    }
+
+    /* ============= PROCHAINES ETAPES ============= */
+    .next-steps {
+      max-width: 1100px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .next-steps h2 {
+      font-size: 1.3rem;
+      color: #9c1c1c;
+      margin-bottom: 0.8rem;
+    }
+    .next-steps p {
+      margin-bottom: 1rem;
+      max-width: 700px;
+      margin: 0.5rem auto;
+      line-height: 1.4;
+    }
+
+    /* ============= MENTIONS LEGALES ============= */
+    .mentions {
+      max-width: 1100px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .mentions h2 {
+      font-size: 1.3rem;
+      color: #9c1c1c;
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
+    .mentions ul {
+      list-style: square;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ============= FOOTER & BUTTONS ============= */
+    .last-update {
+      text-align: center;
+      margin: 1rem auto;
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .back-home-container {
+      max-width: 1100px;
+      margin: 1rem auto;
+      text-align: right;
+      padding: 0 1rem;
+    }
+    .back-home-btn {
+      background: #9c1c1c;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-home-btn:hover {
+      background: #b82727;
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* ============= MEDIA QUERIES ============= */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="Logo capacité en droit" class="header__logo">
+    <h1>Capacité en Droit - Accueil</h1>
+  </header>
+
+  <!-- HERO : Présentation Byron + audio IA -->
+  <section class="hero" id="accueil">
+    <h2>Présentation de Byron</h2>
+    <p>
+      Je m’appelle <strong>Byron</strong>, j’ai 24 ans et j’ai grandi en foyer. 
+      Depuis mon adolescence, je suis un <em>jeune écrivain</em> passionné par le droit. 
+      Mon grand objectif ? Devenir <strong>juge pour enfants</strong> 
+      afin d’aider ceux qui, comme moi, se sont parfois retrouvés en situation précaire 
+      ou en manque de repères.
+    </p>
+    <p>
+      Bien que je ne sois pas (encore) diplômé, j’ai investi des heures et des jours 
+      à fouiller codes et ressources (y compris des vidéos YouTube qui ne sont pas de moi) 
+      pour me préparer à la <strong>capacité en droit</strong>. 
+      De là est né ce manuel (Partie 1 : Méthodologie), 
+      que je partage volontiers pour soutenir d’autres étudiants. 
+      <em>Restez critiques</em>, vérifiez toujours les sources officielles !
+    </p>
+    <hr class="divider">
+    <p>
+      Ci-dessous, un <strong>audio lu par une IA</strong> 
+      qui <em>présente le contenu de ce manuel</em> : ce que vous y trouverez, 
+      les fiches méthodologiques, et pourquoi ces conseils pourraient vous être utiles.
+    </p>
+    <div class="audio-wrapper">
+      <audio controls>
+        <source src="bienvenueaudiodroit.wav" type="audio/wav">
+        Votre navigateur ne supporte pas l'élément audio.
+      </audio>
+    </div>
+  </section>
+
+  <!-- PARTIE 1 : METHODOLOGIE -->
+  <section class="section-container">
+    <h2>Partie 1 : Méthodologie</h2>
+    <p>
+      Voici la première partie de mon manuel. Elle couvre plusieurs techniques 
+      essentielles pour réussir en droit : <em>organiser ses révisions</em>, 
+      <em>faire des fiches</em>, <em>commenter un arrêt ou un article</em>, 
+      <em>réussir une dissertation</em>, ou encore <em>répondre à une QROC</em>.
+    </p>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Organisation & Codes</h3>
+        <ul>
+          <li><a href="organiser.html">S’organiser en étudiant hyper efficace</a></li>
+          <li><a href="lirecodepénal.html">Apprendre à lire les codes (pénal, civil...)</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Fiches & Dissertations</h3>
+        <ul>
+          <li><a href="ficherevision.html">Fiches arc-en-ciel</a></li>
+          <li><a href="dissertation.html">Dissertation juridique</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Commentaires & Cas pratiques</h3>
+        <ul>
+          <li><a href="commentairearret.html">Commentaires d’arrêt</a></li>
+          <li><a href="commentairearticle.html">Commentaires d’articles</a></li>
+          <li><a href="caspratique.html">Cas pratique</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Abréviations & QROC</h3>
+        <ul>
+          <li><a href="abréviationcours.html">Abréviations juridiques</a></li>
+          <li><a href="memoarret.html">Mémo d’arrêt</a></li>
+          <li><a href="QROC.html">QROC</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP 3 CONSEILS RAPIDES -->
+  <section class="tips-section">
+    <h2>Top 3 Conseils Rapides</h2>
+    <div class="tips-grid">
+      <div class="tip-box">
+        <h3>1. Alternez théorie et pratique</h3>
+        <p>
+          Lisez un chapitre de cours, puis entraînez-vous sur un cas pratique 
+          ou un quiz rapide pour valider votre compréhension.
+        </p>
+      </div>
+      <div class="tip-box">
+        <h3>2. Privilégiez la régularité</h3>
+        <p>
+          Mieux vaut 30 minutes de révisions quotidiennes que 5h d’un coup la veille d’un examen. 
+          La mémoire adore la répétition espacée !
+        </p>
+      </div>
+      <div class="tip-box">
+        <h3>3. Exploitez diverses sources</h3>
+        <p>
+          Codes officiels (Légifrance), manuels, vidéos explicatives... 
+          Multipliez les angles pour ancrer durablement la connaissance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2>FAQ (Questions Courantes)</h2>
+
+    <div class="faq-question">
+      <h3>1. Combien d’heures par semaine consacrer à la Capacité en droit ?</h3>
+      <p>
+        Cela dépend de votre situation, mais visez au moins 10 à 15 heures 
+        réparties sur la semaine, en plus de moments de relecture rapide. 
+        La régularité prime.
+      </p>
+    </div>
+
+    <div class="faq-question">
+      <h3>2. Puis-je travailler et étudier en même temps ?</h3>
+      <p>
+        Oui, de nombreux étudiants concilient job et études, 
+        d’où l’importance d’une organisation rigoureuse. 
+        Un planning hebdomadaire est souvent la clé pour y arriver.
+      </p>
+    </div>
+
+    <div class="faq-question">
+      <h3>3. Les fiches arc-en-ciel sont-elles vraiment utiles ?</h3>
+      <p>
+        Si vous êtes sensible à la mémorisation visuelle, c’est un atout. 
+        Sinon, vous pouvez tester d’autres méthodes de fichage. 
+        L’important est d’adopter celle qui vous convient le mieux.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROCHAINES ETAPES -->
+  <section class="next-steps">
+    <h2>Prochaines Étapes</h2>
+    <p>
+      Une fois la partie “Méthodologie” bien maîtrisée, vous pourrez découvrir 
+      la <strong>Partie 2</strong> (à venir) sur les “Cours Généraux”, 
+      où nous aborderons l’histoire du droit, la culture juridique, le droit de la famille, etc. 
+      Restez connectés !
+    </p>
+  </section>
+
+  <!-- MENTIONS LÉGALES -->
+  <section class="mentions">
+    <h2>Mentions Légales & Disclaimer</h2>
+    <p>
+      Conformément à l’<strong>article 6 de la loi n° 2004-575 du 21 juin 2004</strong> 
+      pour la confiance dans l’économie numérique, et au respect du 
+      <strong>Code de la propriété intellectuelle (articles L.111-1 et suivants)</strong> :
+    </p>
+    <ul>
+      <li><strong>Éditeur :</strong> Byron, 24 ans, e-mail : <em>byronpille.pro@gmail.com</em></li>
+      <li><strong>Hébergement :</strong> Site personnel, responsable éditorial : Byron</li>
+      <li>
+        <strong>Droits d’auteur :</strong> Le contenu (textes, audio IA, etc.) est protégé. 
+        Les vidéos YouTube mentionnées dans le manuel ne m’appartiennent pas et restent 
+        la propriété de leurs auteurs.
+      </li>
+      <li>
+        <strong>Responsabilité :</strong> Les informations proviennent de recherches autodidactes ; 
+        elles peuvent comporter des imprécisions. Vérifiez toujours les sources officielles (Légifrance, etc.).
+      </li>
+    </ul>
+    <p>
+      Pour toute question, contactez-moi à <em>byronpille.pro@gmail.com</em>.
+    </p>
+  </section>
+
+  <!-- DATE MISE A JOUR -->
+  <div class="last-update">
+    Dernière mise à jour : 15 mai 2025
+  </div>
+
+  <!-- BOUTON RETOUR EN HAUT -->
+  <div class="back-home-container">
+    <button class="back-home-btn" onclick="scrollToAccueil()">
+      Remonter en haut
+    </button>
+  </div>
+
+  <footer>
+    <p>© 2025 - Byron - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function scrollToAccueil() {
+      const accueilSection = document.getElementById('accueil');
+      accueilSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
